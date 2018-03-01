@@ -1,0 +1,341 @@
+<header role="banner" class="ep2016-header">
+    <div class="container navbar-container">
+        <!-- <div class="row"> -->
+        <navbar></navbar>
+        <!-- </div> -->
+    </div>
+</header>
+<div class="bg_default">
+    <div class="container wrap-container" id='pronoContentContainer'>
+        <div class="row">
+            <div class="col-sm-12">
+                <img src="assets/images/Arena.png" alt="" style="width: 100%;height: auto;margin-bottom:30px;">
+            </div>
+        </div>
+        <div class="row">
+            <div style="text-align:center" ng-if="!nav.isLoggedIn()">
+                <h1> Please <a href="/login">login</a> to enter arena</h1>
+            </div>
+            <div class="col-sm-12" ng-if="nav.isLoggedIn()">
+                <div class="leagueSelect flatglow row">
+                    <div class="logoTitle">
+                        Click on one league you belong to enter Arena
+                        <br>
+                    </div>
+                    <div class="logLig " ng-repeat="league in vm.leagues | filter:vm.search | orderBy:['-pinned','name']">
+                        <a href="" ng-click="vm.loadLeagueDet(league._id)">
+                            <div ng-if="league.owner_id._id==vm.playerId || vm.playerName === 'cedowi'" class="tooltipdate" ng-switch on=" league.image.substr(0,4) ">
+                                <img class="circle imgLig tour" ng-switch-when="http " ng-src="{{league.image}} ">
+                                <img class="circle imgLig tour" ng-switch-default ng-src="assets/images/leagues/{{league.image}} ">
+                                <span class="tooltipdatetext">{{league.name}}</span>
+                            </div>
+                            <div ng-repeat="member in league.members">
+                                <div ng-if="member.user==vm.playerId && league.owner_id._id!==vm.playerId " class="tooltipdate" ng-switch on=" league.image.substr(0,4) ">
+                                    <img class="circle imgLig " ng-switch-when="http " ng-src="{{league.image}} ">
+                                    <img class="circle imgLig " ng-switch-default ng-src="assets/images/leagues/{{league.image}} ">
+                                    <span class="tooltipdatetext">{{league.name}}</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="leagueMembers">
+                    <table class="table table-responsive table-hover table-condensed">
+                        <thead>
+                            <tr>
+                                <th colspan="6" style="font-weight:normal;margin-top:25px;">
+                                    <span>{{vm.leaguesdet.description}}</span>
+                                    <br>
+                                    <br>
+                                    <small style="font-weight:normal" class="text-warning pull-right" ng-if="vm.leaguesdet.type===2">If you don't appear in a private league, that means that your inscription has not been validated by the owner.</small>
+                                </th>
+                                <th colspan="6">
+                                    <div class="skill-name" ng-if="!vm.complete ">Progress</div>
+                                    <div class="skill-name" ng-if="vm.complete ">Complete</div>
+                                    <div class="progress" ng-class="{'progress-striped active': !vm.complete}">
+                                        <div class="progress-bar" ng-class="vm.complete ? 'progress-bar-success':'progress-bar-info'" role="progressbar" aria-valuenow="{{vm.progressMembers}}" aria-valuemin="0" aria-valuemax="100" style="width: {{vm.progressMembers}}%">
+                                        </div>
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr ng-hide="vm.modify">
+                                <th translate>Rank</th>
+                                <th colspan="2"><a href='#' ng-click="sort( 'name'); " translate>Members</a></th>
+                                <th class="c group"><a href="" ng-click="predicate = 'totalpoints'; reverse=!number"><span class="glyphicon glyphicon-arrow-down"></span></a>Pts<a href="" ng-click="predicate = 'totalpoints'; reverse=number"><span class="glyphicon glyphicon-arrow-up"></span></a></th>
+                                <th class="c group">Rnd1</th>
+                                <th class="c group">Rnd2</th>
+                                <th class="c group">Rnd3</th>
+                                <th class="c group">Qualif</th>
+                                <th class="c group">1/8</th>
+                                <th class="c group">1/4</th>
+                                <th class="c group">1/2</th>
+                                <th class="c group">Final</th>
+                                <th class="c group">Win</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!--| filter:{validated:true} -->
+                            <tr class="league " ng-repeat="member in vm.members  | orderBy : ['-bet.points','user.name'] ">
+                                <td><span class="badge" ng-class="{true:'badge-success',false:{true:'badge-error'}[$last]}[$first]">{{$index + 1}}</span></td>
+                                <td> <img class="img-circle" width="30" height="30" ng-src="{{member.user.avatar || 'assets/images/stades/inconnu.gif'}}"></td>
+                                <td><a href="/prono/{{member.user._id}}" class="tooltipdate"> {{member.user.name}} 
+                                    <span class="tooltipdatetext" ng-if="member.user.firstname">{{member.user.firstname}} {{member.user.lastname}}</span></a>
+                                    <span class="tooltipdate label label-as-badge" ng-class="member.validated ? 'label-success':'label-warning'">
+                                            <span class="tooltipdatetext">{{member.join_date | date:short}}</span>
+                                    </span>
+                                </td>
+                                <div ng-if="vm.leaguesdet.status===1 "> <span class="label " ng-class="member.validated ? 'label-success':'label-danger'">{{member.validated}}</span></div>
+                                <td class="c " style="font-weight:bold"> {{member.bet.points}}
+                                </td>
+                                <td class="c ">
+                                    <a href="#" class="tooltipdet">{{member.bet.tour1| number}}<span class="tooltipdettext">
+                                        <div class="titcent" >
+                                         {{member.user.name}} - Round1 (max 60 points)</div>
+                                        <div class="mintext">
+                                        <table class="table">
+                                         <thead>
+                                            <th>Match</th>
+                                            <th>Score</th>
+                                            <th>Points</th>
+                                         </thead>
+                                         <tbody>
+                                        <tr ng-repeat="match in member.matchs | filter:{typematch:'Day 1'}" ng-class="{'bg-success':match.bet.points===3,'bg-big-success':match.bet.points>3,'bg-danger':match.bet.points<3}">
+                                            <td class="l">{{match.team1}} - {{match.team2}}</td>
+                                            <td>{{match.score1}} -  {{match.score2}}</td>
+                                            <td>{{match.bet.points}} <span ng-if="match.bet.invalid===1">** KO -- {{member.date | date:short}}</span> </td>
+                                        </tr>
+                                        </tbody>
+                                        </table>
+                                        </div>
+                                    </span></a>
+                                </td>
+                                <td class="c ">
+                                    <a href="#" class="tooltipdet"> {{member.bet.tour2| number}}<span class="tooltipdettext">
+                                        <div class="titcent" >
+                                        {{member.user.name}} - Round2 (max 60 points)</div>
+                                        <div class="mintext">
+                                        <table class="table">
+                                         <thead>
+                                            <th>Match</th>
+                                            <th>Score</th>
+                                            <th>Points</th>
+                                         </thead>
+                                         <tbody>
+                                        <tr ng-repeat="match in member.matchs  | filter:{typematch:'Day 2'}" ng-class="{'bg-success':match.bet.points===3,'bg-big-success':match.bet.points>3,'bg-danger':match.bet.points<3}">
+                                            <td class="l">{{match.team1}} - {{match.team2}}</td>
+                                            <td>{{match.score1}} -  {{match.score2}}</td>
+                                            <td>{{match.bet.points}} <span ng-if="match.bet.invalid===1">** KO -- {{member.date | date:short}}</span> </td>
+                                        </tr>
+                                        </tbody>
+                                        </table>
+                                        </div>
+                                    </span></a>
+                                </td>
+                                <td class="c ">
+                                    <a href="#" class="tooltipdet">{{member.bet.tour3| number}}<span class="tooltipdettext">
+                                        <div class="titcent" >
+                                         {{member.user.name}} - Round3 (max 60 points)</div>
+                                        <div class="mintext">
+                                        <table class="table">
+                                         <thead>
+                                            <th>Match</th>
+                                            <th>Score</th>
+                                            <th>Points</th>
+                                         </thead>
+                                         <tbody>
+                                        <tr ng-repeat="match in member.matchs  | filter:{typematch:'Day 3'}" ng-class="{'bg-success':match.bet.points===3,'bg-big-success':match.bet.points>3,'bg-danger':match.bet.points<3}">
+                                            <td class="l">{{match.team1}} - {{match.team2}}</td>
+                                            <td>{{match.score1}} -  {{match.score2}}</td>
+                                            <td>{{match.bet.points}} <span ng-if="match.bet.invalid===1">** KO -- {{member.date | date:short}}</span> </td>
+                                        </tr>
+                                        </tbody>
+                                        </table>
+                                        </div>
+                                    </span></a>
+                                </td>
+                                <td class="c ">
+                                    <a href="#" class="tooltipdet"> {{member.bet.qualif['Round of 16']| number}}<span class="tooltipdettext">
+                                        <div class="titcent" >
+                                         {{member.user.name}} - Qualif (max 32 points)</div>
+                                        <div class="mintext">
+                                        <table class="table">
+                                         <thead>
+                                            <th>Team</th>
+                                            <th>Points</th>
+                                         </thead>
+                                         <tbody>
+                                        <tr ng-repeat="qualif in member.bet.teamqualif | filter:'Round of 16' " ng-class="{'bg-big-success':qualif.points===2,'bg-danger':qualif.points<2}">
+                                            <td class="l">{{qualif.team}} </td>
+                                            <td>{{qualif.points}} </td>
+                                        </tr>
+                                        </tbody>
+                                        </table>
+                                        </div>
+                                    </span></a>
+                                </td>
+                                <td class="c ">
+                                    <a href="#" class="tooltipdet"> {{member.bet.roundOf16| number}}<span class="tooltipdettext">
+                                        <div class="titcent" >
+                                         {{member.user.name}} - Round Of 16 (max 40 points)</div>
+                                        <div class="mintext">
+                                        <table class="table">
+                                         <thead>
+                                            <th>Match</th>
+                                            <th>Score</th>
+                                            <th>Points</th>
+                                         </thead>
+                                         <tbody>
+                                        <tr ng-repeat="match in member.matchs | filter:{group:'Round of 16' }" ng-class="{'bg-success':match.bet.points===3,'bg-big-success':match.bet.points>3,'bg-danger':match.bet.points<3}">
+                                            <td class="l">{{match.team1}} - {{match.team2}}</td>
+                                            <td>{{match.score1}} -  {{match.score2}}</td>
+                                            <td>{{match.bet.points}} <span ng-if="match.bet.invalid===1">** KO -- {{member.date | date:short}}</span><span ng-if="match.bet.invalid===2">** Wrong teams : {{match.team1good}} - {{match.team2good}}</span> </td>
+                                        </tr>
+                                        </tbody>
+                                        </table>
+                                        </div>
+                                    </span></a>
+                                </td>
+                                <td class="c ">
+                                    <a href="#" class="tooltipdet"> {{member.bet.quarterFinals + member.bet.qualif['Quarter Finals']| number}}<span class="tooltipdettext">
+                                        <div class="titcent" >
+                                        {{member.user.name}} - Quarter Finals (max 36 points)</div>
+                                        <div class="mintext">
+                                        <table class="table">
+                                         <thead>
+                                            <th>Match</th>
+                                            <th>Score</th>
+                                            <th>Points</th>
+                                         </thead>
+                                         <tbody>
+                                        <tr ng-repeat="match in member.matchs | filter:{group:'Quarter Finals'}" ng-class="{'bg-success':match.bet.points===3,'bg-big-success':match.bet.points>3,'bg-danger':match.bet.points<3}">
+                                            <td class="l">{{match.team1}} - {{match.team2}}</td>
+                                            <td>{{match.score1}} -  {{match.score2}}</td>
+                                            <td>{{match.bet.points}} <span ng-if="match.bet.invalid===1">** KO -- {{member.date | date:short}}</span><span ng-if="match.bet.invalid===2">** Wrong teams : {{match.team1good}} - {{match.team2good}}</span> </td>
+                                        </tr>
+                                        </tbody>
+                                        </table>
+
+                                        <table class="table">
+                                         <thead>
+                                            <th>Qualified Team</th>
+                                            <th>Points</th>
+                                         </thead>
+                                         <tbody>
+                                        <tr ng-repeat="qualif in member.bet.teamqualif | filter:'Quarter Finals' " ng-class="{'bg-big-success':qualif.points===2,'bg-danger':qualif.points<2}">
+                                            <td class="l">{{qualif.team}} </td>
+                                            <td>{{qualif.points}} </td>
+                                        </tr>
+                                        </tbody>
+                                        </table>
+
+                                        </div>
+                                    </span></a>
+                                </td>
+                                <td class="c ">
+                                    <a href="#" class="tooltipdet">{{member.bet.semiFinals + member.bet.qualif['Semi Final']| number}}<span class="tooltipdettext">
+                                        <div class="titcent" >
+                                        {{member.user.name}} - Semi Finals (max 18 points)</div>
+                                        <div class="mintext">
+                                        <table class="table">
+                                         <thead>
+                                            <th>Match</th>
+                                            <th>Score</th>
+                                            <th>Points</th>
+                                         </thead>
+                                         <tbody>
+                                        <tr ng-repeat="match in member.matchs | filter:{group:'Semi Final'}" ng-class="{'bg-success':match.bet.points===3,'bg-big-success':match.bet.points>3,'bg-danger':match.bet.points<3}">
+                                            <td class="l">{{match.team1}} - {{match.team2}}</td>
+                                            <td>{{match.score1}} -  {{match.score2}}</td>
+                                            <td>{{match.bet.points}} <span ng-if="match.bet.invalid===1">** KO -- {{member.date | date:short}}</span><span ng-if="match.bet.invalid===2">** Wrong teams : {{match.team1good}} - {{match.team2good}}</span> </td>
+                                        </tr>
+                                        </tbody>
+                                        </table>
+
+                                        <table class="table">
+                                         <thead>
+                                            <th>Qualified Team</th>
+                                            <th>Points</th>
+                                         </thead>
+                                         <tbody>
+                                        <tr ng-repeat="qualif in member.bet.teamqualif | filter:'Semi Final' " ng-class="{'bg-big-success':qualif.points===2,'bg-danger':qualif.points<2}">
+                                            <td class="l">{{qualif.team}} </td>
+                                            <td>{{qualif.points}} </td>
+                                        </tr>
+                                        </tbody>
+                                        </table>
+                                        </div>
+                                    </span></a>
+                                </td>
+                                <td class="c ">
+                                    <a href="#" class="tooltipdet"> {{member.bet.Finals + member.bet.qualif['Final']| number}}<span class="tooltipdettext">
+                                        <div class="titcent" >
+                                        {{member.user.name}} - Final (max 9 points)</div>
+                                        <div class="mintext">
+                                        <table class="table">
+                                         <thead>
+                                            <th>Match</th>
+                                            <th>Score</th>
+                                            <th>Points</th>
+                                         </thead>
+                                         <tbody>
+                                        <tr ng-repeat="match in member.matchs | filter:{group:'Final'}:true" ng-class="{'bg-success':match.bet.points===3,'bg-big-success':match.bet.points>3,'bg-danger':match.bet.points<3}">
+                                            <td class="l">{{match.team1}} - {{match.team2}}</td>
+                                            <td>{{match.score1}} -  {{match.score2}}</td>
+                                            <td>{{match.bet.points}} <span ng-if="match.bet.invalid===1">** KO -- {{member.date | date:short}}</span><span ng-if="match.bet.invalid===2">** Wrong teams : {{match.team1good}} - {{match.team2good}}</span> </td>
+                                        </tr>
+                                        </tbody>
+                                        </table>
+                                        
+                                        <table class="table">
+                                         <thead>
+                                            <th>Qualified Team</th>
+                                            <th>Points</th>
+                                         </thead>
+                                         <tbody>
+                                        <tr ng-repeat="qualif in member.bet.teamqualif | filter:'Final':true " ng-class="{'bg-big-success':qualif.points===2,'bg-danger':qualif.points<2}">
+                                            <td class="l">{{qualif.team}} </td>
+                                            <td>{{qualif.points}} </td>
+                                        </tr>
+                                        </tbody>
+                                        </table>
+                                        </div>
+                                    </span></a>
+                                </td>
+                                <td class="c ">
+                                    <a href="#" class="tooltipdet">{{member.bet.winner | number}}<span class="tooltipdettext">
+                                        <div class="titcent" >
+                                          {{member.user.name}} - Winner (max 5 points)</div>
+                                        <div class="mintext">
+                                        <table class="table">
+                                         <thead>
+                                            <th>Team</th>
+                                            <th>Euro</th>
+                                            <th>Points</th>
+                                         </thead>
+                                         <tbody>
+                                        <tr ng-class="{'bg-big-success':member.bet.winner.points>5,'bg-danger':member.bet.winner.points<5}">
+                                            <td>{{member.bet.winnerDetails.team }} </td>
+                                            <td>{{member.bet.winnerDetails.euro }} </td>
+                                            <td>{{member.bet.winner }} </td>
+                                        </tr>
+                                        </tbody>
+                                        </table>
+                                        </div>
+                                    </span></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <footer></footer>
+    </div>
+</div>

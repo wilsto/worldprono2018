@@ -1,0 +1,66 @@
+<header role="banner" class="ep2016-header">
+    <div class="container navbar-container">
+        <!-- <div class="row"> -->
+        <navbar></navbar>
+        <!-- </div> -->
+    </div>
+</header>
+<div class="bg_default">
+    <div class="container wrap-container">
+        <div class="row">
+            <div class="col-sm-12"> <img src="assets/images/stades/ball_player.png" alt="" style="max-width: 100%;height: auto;margin-bottom:30px;"></div>
+        </div>
+        <div class="row" ng-hide="vm.showNew">
+            <div class="col-sm-12">
+                <div id="players" class="PlayersContent">
+                    <table class="table table-responsive table-hover">
+                        <thead>
+                            <tr>
+                                <div class="user-info " style="margin:10px;">
+                                    <p style="display: inline-block;width:100px;">Filter players </p>
+                                    <input type="text" class="form-control" style=" display: inline-block;width:50%;margin-left: 10px;" ng-model="vm.search.$">
+                                </div>
+                            </tr>
+                            <tr>
+                                <th>Player ({{vm.users.length}})</th>
+                                <th>Pseudo</th>
+                                <th>Leagues</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="league" ng-repeat="player in vm.users | filter:vm.search | filter:{'visible':!false} | orderBy : 'name' ">
+                                <td>
+                                    <img class="img-circle" width="50" height="50" ng-src="{{player.avatar || 'assets/images/stades/inconnu.gif'}}">
+                                </td>
+                                <td>
+                                    <a href="/prono/{{player._id}}"> {{player.name}}</a>
+                                    <br><small ng-show="player.firstname" class="text-muted">({{player.firstname}} {{player.lastname}} )</small>
+                                </td>
+                                <td style="width:75%">
+                                    <div class="logLig" ng-repeat="league in vm.leagues | orderBy:['-pinned','name']">
+                                        <a href="/leaguedetails/{{league._id}}">
+                                            <div ng-if="league.owner_id._id==player._id" class="tooltipdate" ng-switch on=" league.image.substr(0,4) ">
+                                                <img class="circle imgLig tour" ng-switch-when="http " ng-src="{{league.image}} ">
+                                                <img class="circle imgLig tour" ng-switch-default ng-src="assets/images/leagues/{{league.image}} ">
+                                                <span class="tooltipdatetext">{{league.name}}</span>
+                                            </div>
+                                            <div ng-repeat="member in league.members">
+                                                <div ng-if="member.user==player._id && league.owner_id._id!==player._id" class="tooltipdate" ng-switch on=" league.image.substr(0,4) ">
+                                                    <img class="circle imgLig " ng-switch-when="http " ng-src="{{league.image}} ">
+                                                    <img class="circle imgLig " ng-switch-default ng-src="assets/images/leagues/{{league.image}} ">
+                                                    <span class="tooltipdatetext">{{league.name}}</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- fin auto -->
+                </div>
+            </div>
+        </div>
+        <footer></footer>
+    </div>
+</div>

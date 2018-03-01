@@ -1,0 +1,59 @@
+.logoTitle {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.badge-success {
+    background-color: #468847
+}
+
+.badge-error {
+    background-color: red;
+}
+
+.tooltipdet {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.tooltipdet .tooltipdettext {
+    visibility: hidden;
+    width: 300px;
+    size: 1px;
+    border-radius: 6px;
+    border-color: #42AAFF;
+    border-style: solid;
+    padding: 10px 0;
+    /* Position the tooltipdet */
+    position: absolute;
+    z-index: 1;
+    background: #FFF;
+}
+
+.tooltipdet:hover .tooltipdettext {
+    visibility: visible;
+}
+
+.titcent {
+    background-color: #BAD3FF;
+    text-align: center;
+}
+
+.mintext {
+    font-size: 11px;
+}
+
+.bg-big-success {
+    background: #A3D1A2;
+}
+
+.c {
+    text-align: center;
+    width: 7%;
+}
+
+.l {
+    text-align: left;
+}

@@ -1,0 +1,120 @@
+<header role="banner" class="ep2016-header">
+    <div class="container navbar-container">
+        <!-- <div class="row"> -->
+        <navbar></navbar>
+        <!-- </div> -->
+    </div>
+</header>
+<div class="bg_default">
+    <div class="container wrap-container">
+        <div class="row">
+            <div class="col-sm-12">
+                <img src="assets/images/ball_teams.png" alt="" style="max-width: 100%;height: auto;margin-bottom:30px;">
+            </div>
+        </div>
+        <div class="col-xs-12 col-xs-12 col-md-12 col-lg-12">
+            <div class="userStats">
+                <div class="data">
+                    <button type="button" class="btn btn-primary btn-xs" ng-click="vm.orderProp ='name'" translate>sort by Name</button>
+                    <button type="button" class="btn btn-primary btn-xs" ng-click="vm.orderProp = 'group'" translate>sort by Group</button>
+                    <ul class="list-group user-list">
+                        <li class="list-group-item" ng-repeat="team in vm.teams | orderBy:vm.orderProp">
+                            <div class="user-info">
+                                <div class="col-md-1 flag flag1">
+                                    <div class="countryflagmax {{team.name}}"></div>
+                                </div>
+                                <div class="col-md-2"> {{ 'Group' | translate }} :<span class="text-muted">{{team.group}}</span></div>
+                                <div class="col-md-4"><span><strong>{{team.name | translate}}</strong> </span></div>
+                                <div class="col-md-4"><span class="text-muted"><a ng-click="vm.openPlayers( team)" class="btn btn-primary "><i class="glyphicon glyphicon-eye-open"></i> Players </a>
+                                 </span>
+                                </div>
+                                <div ng-show="team.showPlay">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>bio</th>
+                                                <th>Caps</th>
+                                                <th>Clubs</th>
+                                                <th>Date of birth</th>
+                                                <th>Goal for country</th>
+                                                <th>League</th>
+                                                <th>position</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="player in team.players ">
+                                                <td>
+                                                    {{player.player}}
+                                                </td>
+                                                <td>
+                                                    {{player.bio}}
+                                                </td>
+                                                <td>
+                                                    {{player.caps}}
+                                                </td>
+                                                <td>
+                                                    {{player.club}}
+                                                </td>
+                                                <td>
+                                                    {{player.dob}}
+                                                </td>
+                                                <td>
+                                                    {{player.gfc}}
+                                                </td>
+                                                <td>
+                                                    {{player.league}}
+                                                </td>
+                                                <td>
+                                                    {{player.position}}
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="userStats" ng-if="nav.isAdmin()">
+                <div class="data">
+                    <div class="head">
+                        <h2>Add new team</h2>
+                        <form class="form" name="form" ng-submit="vm.createTeam(form)" novalidate>
+                            <div class="form-group">
+                                <label>Code</label>
+                                <input type="text" name="code" class="form-control" ng-model="vm.newteam.code" required style="background-color: #FFF" tabindex=1>
+                            </div>
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" name="name" class="form-control" ng-model="vm.newteam.name" required style="background-color: #FFF" tabindex=2>
+                            </div>
+                            <div class="form-group">
+                                <label>Group</label>
+                                <input type="text" name="group" class="form-control" ng-model="vm.newteam.group" required style="background-color: #FFF" tabindex=3>
+                            </div>
+                            <div class="form-group">
+                                <label>Image</label>
+                                <input type="text" name="image" class="form-control" ng-model="vm.newteam.image" required style="background-color: #FFF" tabindex=4>
+                            </div>
+                            <div class="form-group">
+                                <label>Comment</label>
+                                <input type="text" name="comment" class="form-control" ng-model="vm.newteam.comment" required style="background-color: #FFF" tabindex=5>
+                            </div>
+                            <div>
+                                <button class="btn btn-success btn-lg " type="submit" style="float:right;width:200px">
+                                    Save
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- vm est une convention (view model) ca évite de se poser des quesitons quand tu change de page vm.vms
+{{vm.teams}}
+
+-->

@@ -1,0 +1,113 @@
+<header role="banner" class="ep2016-header">
+    <div class="container navbar-container">
+        <!-- <div class="row"> -->
+        <navbar></navbar>
+        <!-- </div> -->
+    </div>
+</header>
+<div class="bg_default">
+    <div class="container wrap-container">
+        <div class="row">
+            <div class="col-sm-12" style="center;">
+                <img src="assets/images/ball_matchs.png" alt="" style="max-width: 100%;margin-bottom:30px; ">
+            </div>
+        </div>
+        <div class="col-xs-12 col-xs-12 col-md-12 col-lg-12">
+            <div class="matchBorder userStats ">
+                <div class="data">
+                    Filter:
+                    <div class="btn-group" role="group" aria-label="Group">
+                        <button type="button" class="btn btn-primary btn-xs" ng-click="vm.addFilter('','');">None</button>
+                        <button type="button" class="btn btn-primary btn-xs" ng-click="vm.addFilter('group','A');">A</button>
+                        <button type="button" class="btn btn-primary btn-xs" ng-click="vm.addFilter('group','B');">B</button>
+                        <button type="button" class="btn btn-primary btn-xs" ng-click="vm.addFilter('group','C');">C</button>
+                        <button type="button" class="btn btn-primary btn-xs" ng-click="vm.addFilter('group','D');">D</button>
+                        <button type="button" class="btn btn-primary btn-xs" ng-click="vm.addFilter('group','E');">E</button>
+                        <button type="button" class="btn btn-primary btn-xs" ng-click="vm.addFilter('group','F');">F</button>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-danger btn-xs" ng-click="vm.addFilter('typematch','Day 1');">{{'Day 1' | translate }} </button>
+                        <button type="button" class="btn btn-danger btn-xs" ng-click="vm.addFilter('typematch','Day 2');">{{'Day 2' | translate }}</button>
+                        <button type="button" class="btn btn-danger btn-xs" ng-click="vm.addFilter('typematch','Day 3');">{{'Day 3' | translate }}</button>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-success btn-xs" ng-click="vm.addFilter('group','Round of 16');">{{'Round of 16' | translate }}</button>
+                        <button type="button" class="btn btn-success btn-xs" ng-click="vm.addFilter('group','Quarter Finals');">{{'Quarter Finals' | translate }}</button>
+                        <button type="button" class="btn btn-success btn-xs" ng-click="vm.addFilter('group','Semi Final');">{{'Semi Final' | translate }}</button>
+                        <button type="button" class="btn btn-success btn-xs" ng-click="vm.addFilter('typematch','Final');">{{'Final' | translate }}</button>
+                    </div>
+                    <div class="table-responsive ">
+                        <table class="table table-responsive ">
+                            <thead>
+                                <tr>
+                                    <th><a href='#' ng-click="sort('typematch'); ">Match</a></th>
+                                    <th>
+                                        <a href='#' ng-click="sort( 'group'); ">{{'Group' | translate }}</a>
+                                    </th>
+                                    <th><a href='#' ng-click="sort( 'date'); ">Date</a></th>
+                                    <th><a href='#' ng-click="sort( 'team1'); ">{{'Teams' | translate }}</a></th>
+                                    <th><a href='#' ng-click="sort( 'image'); ">{{'Stadium'| translate}}</a></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="match in vm.matchs | orderBy:orderProp ">
+                                    <td> {{match.typematch | translate}} </td>
+                                    <td> {{match.group | translate}} </td>
+                                    <td> {{match.date | date : 'dd MMM yyyy HH:mm' : timezone}} </td>
+                                    <td><strong>{{match.team1 | translate}} - {{match.team2 |translate}}</strong> </td>
+                                    <td><img ng-src="assets/images/stades/{{match.image}}.jpg " alt="{{match.image}} " class="circle "> {{match.stade}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="userStats" ng-if="nav.isAdmin()">
+            <div class="data">
+                <form class="form " name="form " ng-submit="vm.createMatch(form) " novalidate>
+                    <div class="form-group ">
+                        <label>Type match</label>
+                        <input type="text " name="typematch " class="form-control " ng-model="vm.newmatch.typematch " required style="background-color: #FFF " tabindex=1>
+                    </div>
+                    <div class="form-group ">
+                        <label>Group</label>
+                        <input type="text " name="group " class="form-control " ng-model="vm.newmatch.group " required style="background-color: #FFF " tabindex=2>
+                    </div>
+                    <div class="form-group ">
+                        <label>order</label>
+                        <input type="text " name="grouporder " class="form-control " ng-model="vm.newmatch.grouporder " required style="background-color: #FFF " tabindex=3>
+                    </div>
+                    <div class="form-group ">
+                        <label>Team1</label>
+                        <input type="text " name="team1 " class="form-control " ng-model="vm.newmatch.team1" required style="background-color: #FFF " tabindex=3>
+                    </div>
+                    <div class="form-group ">
+                        <label>Team2</label>
+                        <input type="text " name="team2 " class="form-control " ng-model="vm.newmatch.team2 " required style="background-color: #FFF " tabindex=5>
+                    </div>
+                    <div class="form-group ">
+                        <label>Date</label>
+                        <input type="text " name="date " class="form-control " ng-model="vm.newmatch.date " required style="background-color: #FFF " tabindex=6>
+                    </div>
+                    <div class="form-group ">
+                        <label>Stade</label>
+                        <input type="text " name="stade " class="form-control " ng-model="vm.newmatch.stade " required style="background-color: #FFF " tabindex=7>
+                    </div>
+                    <div class="form-group ">
+                        <label>Image</label>
+                        <input type="text " name="image " class="form-control " ng-model="vm.newmatch.image " required style="background-color: #FFF " tabindex=8>
+                    </div>
+                    <div>
+                        <button class="btn btn-success btn-lg " type="submit " style="float:right;width:200px ">
+                            Save
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- vm est une convention (view model) ca évite de se poser des quesitons quand tu change de page vm.vms
+{{vm.teams}}
+
+-->

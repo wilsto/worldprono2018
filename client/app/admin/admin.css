@@ -1,0 +1,48 @@
+.trash {
+    color: rgb(209, 91, 71);
+}
+
+.user-list li {
+    display: flex;
+    border: none;
+    border-bottom: 1px lightgray solid;
+    margin-bottom: 0;
+}
+
+.user-list li:last-child {
+    border-bottom: none;
+}
+
+.user-list li .user-info {
+    flex-grow: 1;
+}
+
+.user-list li .image {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.user-list li .trash {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.user-list li a {
+    margin-left: 10px;
+    height: 35px;
+}
+
+.navbar-admin {
+    color: #06345F;
+}
+
+.user-info span {
+    display: inline-block;
+}
+
+.user_auto_span {
+    width: 15%;
+    margin-left: 10px;
+}
