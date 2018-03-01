@@ -1,11 +1,12 @@
-[![Stories in Ready](https://badge.waffle.io/wilsto/EuroProno2016_Web.png?label=ready&title=Ready)](https://waffle.io/wilsto/EuroProno2016_Web)
-# euro-prono2016-web
+# WorldCup Prono 2018
+
+[![Watch the video](http://img.youtube.com/vi/qJ3eIZDXu9M/maxresdefault.jpg)](https://youtu.be/qJ3eIZDXu9M)
 
 ## Pour commencer
 Ce projet a été généré avec [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 3.5.0.
 
 - Build Systems: Grunt
-- Testing: Mocha + Chai (assertions: Expect) + Sinon 
+- Testing: Mocha + Chai (assertions: Expect) + Sinon
 
 ### Client
 - Scripts: TypeScript
