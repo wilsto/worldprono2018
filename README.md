@@ -28,13 +28,14 @@ Ce projet a été généré avec [Angular Full-Stack Generator](https://github.c
 
 - [Git](https://git-scm.com/)
 - [gitKraken](https://www.gitkraken.com/)
-- [Node.js and npm](nodejs.org) Node ^4.2.3, npm ^2.14.7
+- [Node.js and npm](nodejs.org) Node ^6.11.1, npm ^3.9.5
+- [Yarn](https://yarnpkg.com/) (`npm install --global yarn`)
 - [Bower](bower.io) (`npm install --global bower`)
 - [Grunt](http://gruntjs.com/) (`npm install --global grunt-cli`)
 - [MongoDB](https://www.mongodb.org/) - Keep a running daemon with `mongod`
 
 ### Installation
-1. Run `npm install` to install server dependencies.
+1. Run `yarn install` to install server dependencies.
 2. Run `bower install` to install front-end dependencies.
 
 ### Developpement

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('euroProno2016WebApp')
+angular.module('worldProno2018App')
   .factory('Modal', function($rootScope, $uibModal) {
     /**
      * Opens a modal

@@ -21,7 +21,7 @@ function UserResource($resource) {
   });
 }
 
-angular.module('euroProno2016WebApp.auth')
+angular.module('worldProno2018App.auth')
   .factory('User', UserResource);
 
 })();

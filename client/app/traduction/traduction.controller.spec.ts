@@ -3,7 +3,7 @@
 describe('Component: TraductionComponent', function () {
 
   // load the controller's module
-  beforeEach(module('euroProno2016WebApp'));
+  beforeEach(module('worldProno2018App'));
 
   var TraductionComponent, scope;
 

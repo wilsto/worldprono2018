@@ -66,7 +66,7 @@
         }
     }
 
-    angular.module('euroProno2016WebApp')
+    angular.module('worldProno2018App')
         .component('league', {
             templateUrl: 'app/league/league.html',
             controller: LeagueComponent,

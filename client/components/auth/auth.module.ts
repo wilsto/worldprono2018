@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('euroProno2016WebApp.auth', [
-  'euroProno2016WebApp.constants',
-  'euroProno2016WebApp.util',
+angular.module('worldProno2018App.auth', [
+  'worldProno2018App.constants',
+  'worldProno2018App.util',
   'ngCookies',
   'ui.router'
 ])

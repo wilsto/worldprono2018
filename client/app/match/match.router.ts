@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('euroProno2016WebApp.matchs')
+angular.module('worldProno2018App.matchs')
     .config(function($stateProvider) {
         $stateProvider
             .state('match', {

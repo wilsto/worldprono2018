@@ -46,5 +46,5 @@ class SignupController {
     }
 }
 
-angular.module('euroProno2016WebApp')
+angular.module('worldProno2018App')
     .controller('SignupController', SignupController);

@@ -1,208 +1,209 @@
 <header role="banner" class="ep2016-header main-header">
-    <div class="container main-container">
-        <!-- <div class="row"> -->
-        <navbar></navbar>
-        <!-- </div> -->
-    </div>
+  <div class="container main-container">
+    <!-- <div class="row"> -->
+    <navbar></navbar>
+    <!-- </div> -->
+  </div>
 </header>
-<section id="ep2016-home" data-section="home" style="background-image: url('assets/images/stades/bg2.jpg');">
-    <div class="container">
-        <div class="text-wrap">
-            <div class="text-inner">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1 class="to-animate" style="font-size: 66px;font-weight: bold" translate>Play for fun, play to win</h1>
-                        <h2 class="to-animate" translate>Live intensely every match of WorldCup 2018</h2>
-                        <h1 class="to-animate"><span class="text-primary" translate>Already</span> {{vm.playersNb || '?'}} <span class="text-danger" translate>players</span></h1>
-                    </div>
-                </div>
-            </div>
+<section id="ep2016-home" data-section="home" style="background-image: url('assets/images/stades/bg2.jpg');" zum-waypoint="waypoints" down="home.on" offset="80%">
+  <div class="container"  >
+    <div class="text-wrap">
+      <div class="text-inner">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <h1 class="to-animate" ng-class="{'fadeInUp animated': waypoints.home.on}"  style="font-size: 66px;font-weight: bold" translate>Play for fun, play to win</h1>
+            <h2 class="to-animate"ng-class="{'fadeInUp animated': waypoints.home.on}"   translate>Live intensely every match of WorldCup 2018</h2>
+            <h1 class="to-animate" ng-class="{'fadeInUp animated': waypoints.home.on}" ><span class="text-primary" translate>Already</span> {{vm.playersNb || '?'}} <span class="text-danger" translate>players</span></h1>
+          </div>
         </div>
+      </div>
     </div>
-    <div class="slant"></div>
+  </div>
+  <div class="slant"></div>
 </section>
-<section id="ep2016-intro">
-    <div class="container">
-        <div class="row row-bottom-padded-lg">
-            <div class="ep2016-block to-animate" style="background-image: url('assets/images/illustration-coupe-du-monde-russie-2018.jpg');">
-                <div class="overlay-darker"></div>
-                <div class="overlay"></div>
-                <div class="ep2016-text">
-                    <i class="ep2016-intro-icon iconmoon-soccer-ball-o"></i>
-                    <h2 translate>WorlCup 2018</h2>
-                    <p translate>Follow the scores of 64 World Cup football matches with 32 teams competing in 10 stadiums</p>
-                    <p><a href="/news" class="btn btn-primary" translate>Jump In</a></p>
-                </div>
-            </div>
-            <div class="ep2016-block to-animate" style="background-image: url('assets/images/play.jpg');">
-                <div class="overlay-darker"></div>
-                <div class="overlay"></div>
-                <div class="ep2016-text">
-                    <i class="ep2016-intro-icon icon-game-controller"></i>
-                    <h2 translate>Play</h2>
-                    <p translate>Just for fun or because you used to gamble and be right, enter in the arena of pronostics.</p>
-                    <p><a href="/prono" class="btn btn-primary" translate>Gamble</a></p>
-                </div>
-            </div>
-            <div class="ep2016-block to-animate" style="background-image: url('assets/images/board_bg.jpg');">
-                <div class="overlay-darker"></div>
-                <div class="overlay"></div>
-                <div class="ep2016-text">
-                    <i class="ep2016-intro-icon icon-speedometer"></i>
-                    <h2 translate>Battle</h2>
-                    <p translate>No kidding. :) So you think you are the player who will smash concurrence with your skills of gambling?</p>
-                    <p><a href="/arena" class="btn btn-primary" translate>Find it out</a></p>
-                </div>
-            </div>
+<section id="ep2016-intro"  zum-waypoint="waypoints" down="intro.on" offset="80%">
+  <div class="container">
+    <div class="row row-bottom-padded-lg">
+      <div class="ep2016-block to-animate" ng-class="{'fadeInUp animated': waypoints.intro.on}"  style="background-image: url('assets/images/illustration-coupe-du-monde-russie-2018.jpg');">
+        <div class="overlay-darker"></div>
+        <div class="overlay"></div>
+        <div class="ep2016-text">
+          <i class="ep2016-intro-icon iconmoon-soccer-ball-o"></i>
+          <h2 translate>WorlCup 2018</h2>
+          <p translate>Follow the scores of 64 World Cup football matches with 32 teams competing in 10 stadiums</p>
+          <p><a href="/news" class="btn btn-primary" translate>Jump In</a></p>
         </div>
-        <div class="row watch-video text-center to-animate">
-            <span translate>Watch the video</span>
-            <div class="iframe-responsive-wrapper">
-                <img class="iframe-ratio" src="data:image/gif;base64,R0lGODlhEAAJAIAAAP///wAAACH5BAEAAAAALAAAAAAQAAkAAAIKhI+py+0Po5yUFQA7" />
-                <iframe width="640" height="360" src="https://www.youtube.com/embed/qJ3eIZDXu9M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
+      </div>
+      <div class="ep2016-block to-animate" ng-class="{'fadeInUp animated': waypoints.intro.on}"  style="background-image: url('assets/images/play.jpg');">
+        <div class="overlay-darker"></div>
+        <div class="overlay"></div>
+        <div class="ep2016-text">
+          <i class="ep2016-intro-icon icon-game-controller"></i>
+          <h2 translate>Play</h2>
+          <p translate>Just for fun or because you used to gamble and be right, enter in the arena of pronostics.</p>
+          <p><a href="/prono" class="btn btn-primary" translate>Gamble</a></p>
         </div>
+      </div>
+      <div class="ep2016-block to-animate" ng-class="{'fadeInUp animated': waypoints.intro.on}"  style="background-image: url('assets/images/board_bg.jpg');">
+        <div class="overlay-darker"></div>
+        <div class="overlay"></div>
+        <div class="ep2016-text">
+          <i class="ep2016-intro-icon icon-speedometer"></i>
+          <h2 translate>Battle</h2>
+          <p translate>No kidding. :) So you think you are the player who will smash concurrence with your skills of gambling?</p>
+          <p><a href="/arena" class="btn btn-primary" translate>Find it out</a></p>
+        </div>
+      </div>
     </div>
+    <div class="row watch-video text-center to-animate"  zum-waypoint="waypoints" down="video.on" offset="80%" ng-class="{'fadeInUp animated': waypoints.video.on}" >
+      <span translate>Watch the video</span>
+      <div class="iframe-responsive-wrapper">
+        <img class="iframe-ratio" src="data:image/gif;base64,R0lGODlhEAAJAIAAAP///wAAACH5BAEAAAAALAAAAAAQAAkAAAIKhI+py+0Po5yUFQA7" />
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/qJ3eIZDXu9M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
 </section>
-<section id="ep2016-services" data-section="services" style="background-image: url('http://theartmad.com/wp-content/uploads/2015/08/Adidas-Football-Wallpaper-2014-4.jpg');">
-    <div class="container">
-        <div class="row" style="height: 300px!important">
-            <div class="col-md-12 section-heading text-left">
-                <h2 class=" left-border to-animate" translate>Services <small style="color: #FFF" translate>For free</small></h2>
-                <div class="row">
-                    <div class="col-md-8 subtext to-animate">
-                        <h3 translate>Have fun together!  The original reason for our existence. We are players of the heart. We play games all the time, so we've formed a team (talented?) that will make sure your game is as fun as possible.</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
+<section id="ep2016-services" data-section="services" style="background-image: url('http://theartmad.com/wp-content/uploads/2015/08/Adidas-Football-Wallpaper-2014-4.jpg');"
+           zum-waypoint="waypoints" down="services.on" offset="80%">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 section-heading text-left">
+        <h2 class=" left-border to-animate" ng-class="{'fadeInUp animated': waypoints.services.on}"  translate>Services <small style="color: #FFF" translate>For free</small></h2>
         <div class="row">
-            <div class="col-md-6 col-sm-6 ep2016-service to-animate">
-                <i class="icon to-animate-2 iconmoon-eye2" style="margin-top:50px;margin-bottom: -70px;"></i>
-                <h3 translate>Follow the tournament</h3>
-                <p translate>We love football. We love France. And again this year (after 98; -), we could not miss a big footballing event where France will be the 2018 World Champion (or not).</p>
-            </div>
-            <div class="col-md-6 col-sm-6 ep2016-service to-animate">
-                <i class="icon to-animate-2 iconmoon-money" style="    margin-top:50px;margin-bottom: -70px;"></i>
-                <h3 translate>Bet on all matchs</h3>
-                <p translate>We want to vibrate on every match during this World Cup, and not only for France. We will make pronotiscs for the whole tournament and more... if affinity.</p>
-            </div>
-            <div class="clearfix visible-sm-block"></div>
-            <div class="col-md-6 col-sm-6 ep2016-service to-animate">
-                <i class="icon to-animate-2 iconmoon-group" style="    margin-top:50px;margin-bottom: -70px;"></i>
-                <h3 translate>Create or join your league</h3>
-                <p translate>Fun is bigger with friends, family or colleagues, you can create or join your own leagues and share this event with maximum of players</p>
-            </div>
-            <div class="col-md-6 col-sm-6 ep2016-service to-animate">
-                <i class="icon to-animate-2 iconmoon-star2" style="margin-top:50px;margin-bottom: -70px;"> </i>
-                <h3 translate>Measure yourself to others</h3>
-                <p translate>Play is fun but win is great, mostly if we can be better than others good players. But can you really ?</p>
-            </div>
+          <div class="col-md-8 subtext to-animate">
+            <h3 translate>Have fun together!  The original reason for our existence. We are players of the heart. We play games all the time, so we've formed a team (talented?) that will make sure your game is as fun as possible.</h3>
+          </div>
         </div>
+      </div>
     </div>
+    <div class="row">
+      <div class="col-md-6 col-sm-6 ep2016-service to-animate" ng-class="{'fadeInUp animated': waypoints.services.on}">
+        <i class="icon to-animate-2 iconmoon-eye2" style="margin-top:50px;margin-bottom: -70px;"></i>
+        <h3 translate>Follow the tournament</h3>
+        <p translate>We love football. We love France. And again this year (after 98; -), we could not miss a big footballing event where France will be the 2018 World Champion (or not).</p>
+      </div>
+      <div class="col-md-6 col-sm-6 ep2016-service to-animate" ng-class="{'fadeInUp animated': waypoints.services.on}">
+        <i class="icon to-animate-2 iconmoon-money" style="    margin-top:50px;margin-bottom: -70px;"></i>
+        <h3 translate>Bet on all matchs</h3>
+        <p translate>We want to vibrate on every match during this World Cup, and not only for France. We will make pronotiscs for the whole tournament and more... if affinity.</p>
+      </div>
+      <div class="clearfix visible-sm-block"></div>
+      <div class="col-md-6 col-sm-6 ep2016-service to-animate" ng-class="{'fadeInUp animated': waypoints.services.on}">
+        <i class="icon to-animate-2 iconmoon-group" style="    margin-top:50px;margin-bottom: -70px;"></i>
+        <h3 translate>Create or join your league</h3>
+        <p translate>Fun is bigger with friends, family or colleagues, you can create or join your own leagues and share this event with maximum of players</p>
+      </div>
+      <div class="col-md-6 col-sm-6 ep2016-service to-animate" ng-class="{'fadeInUp animated': waypoints.services.on}">
+        <i class="icon to-animate-2 iconmoon-star2" style="margin-top:50px;margin-bottom: -70px;"> </i>
+        <h3 translate>Measure yourself to others</h3>
+        <p translate>Play is fun but win is great, mostly if we can be better than others good players. But can you really ?</p>
+      </div>
+    </div>
+  </div>
 </section>
-<section id="ep2016-about" data-section="about">
-    <div class="container">
+<section id="ep2016-about" data-section="about" zum-waypoint="waypoints" down="about.on" offset="80%">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 section-heading text-center">
+        <h2 class="to-animate"  ng-class="{'fadeInUp animated': waypoints.about.on}" translate>About Us</h2>
         <div class="row">
-            <div class="col-md-12 section-heading text-center">
-                <h2 class="to-animate" translate>About Us</h2>
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 subtext to-animate">
-                        <h3 translate>In a galaxy far far away, or maybe just in France, near Paris, there live three guys.</h3>
-                    </div>
-                </div>
-            </div>
+          <div class="col-md-8 col-md-offset-2 subtext to-animate"  ng-class="{'fadeInUp animated': waypoints.about.on}" >
+            <h3 translate>In a galaxy far far away, or maybe just in France, near Paris, there live three guys.</h3>
+          </div>
         </div>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="ep2016-person text-center to-animate">
-                    <figure><img src="assets/images/Ced.png" alt="Image"></figure>
-                    <h3>Cédric</h3>
-                    <span class="ep2016-position">Doubist</span>
-                    <p translate>Comté eater. Came from the Swiss border to the border of Paris to learn and code with friends</p>
-                    <ul class="social social-circle">
-                        <li><a href="#" target="_blank"><i class="iconmoon-twitter"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="iconmoon-facebook"></i></a></li>
-                        <li><a href="https://github.com/CedDev" target="_blank"><i class="iconmoon-github"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="ep2016-person text-center to-animate">
-                    <figure><img src="assets/images/Ned.jpg" alt="Image" style="height:120px"></figure>
-                    <h3>Edouard</h3>
-                    <span class="ep2016-position">Goal Keeper</span>
-                    <p translate>Coming from a village populated by inflexible Normans, true supporter of Marseille and Caen, I joined the team to offer my tester skills.</p>
-                    <ul class="social social-circle">
-                        <li><a href="#" target="_blank"><i class="iconmoon-twitter"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="iconmoon-facebook"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="iconmoon-github"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="ep2016-person text-center to-animate">
-                    <figure><img src="assets/images/Will.png" alt="Image"></figure>
-                    <h3>Will</h3>
-                    <span class="ep2016-position">Geek 2.0</span>
-                    <p>
-                        <span translate>Born with a keyboard and mouse</span>
-                        <span style="text-decoration: line-through;" translate> to play videogames </span>
-                        <span translate> to program, rest assured I found some times for other geek stuff too.</span>
-                    </p>
-                    <ul class="social social-circle">
-                        <li><a href="#" target="_blank"><i class="iconmoon-twitter"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="iconmoon-facebook"></i></a></li>
-                        <li><a href="https://github.com/wilsto" target="_blank"><i class="iconmoon-github"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class=" to-animate">
-                    <iframe src="//www.tipeee.com/embed/project/116998" allowtransparency="true" width="100%" height="380" style="margin-top:-10px"></iframe>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="ep2016-person text-center to-animate"  ng-class="{'fadeInUp animated': waypoints.about.on}" >
+          <figure><img src="assets/images/Ced.png" alt="Image"></figure>
+          <h3>Cédric</h3>
+          <span class="ep2016-position">Doubist</span>
+          <p translate>Comté eater. Came from the Swiss border to the border of Paris to learn and code with friends</p>
+          <ul class="social social-circle">
+            <li><a href="#" target="_blank"><i class="iconmoon-twitter"></i></a></li>
+            <li><a href="#" target="_blank"><i class="iconmoon-facebook"></i></a></li>
+            <li><a href="https://github.com/CedDev" target="_blank"><i class="iconmoon-github"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="ep2016-person text-center to-animate"  ng-class="{'fadeInUp animated': waypoints.about.on}" >
+          <figure><img src="assets/images/Ned.jpg" alt="Image" style="height:120px"></figure>
+          <h3>Edouard</h3>
+          <span class="ep2016-position">Goal Keeper</span>
+          <p translate>Coming from a village populated by inflexible Normans, true supporter of Marseille and Caen, I joined the team to offer my tester skills.</p>
+          <ul class="social social-circle">
+            <li><a href="#" target="_blank"><i class="iconmoon-twitter"></i></a></li>
+            <li><a href="#" target="_blank"><i class="iconmoon-facebook"></i></a></li>
+            <li><a href="#" target="_blank"><i class="iconmoon-github"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="ep2016-person text-center to-animate"  ng-class="{'fadeInUp animated': waypoints.about.on}" >
+          <figure><img src="assets/images/Will.png" alt="Image"></figure>
+          <h3>Will</h3>
+          <span class="ep2016-position">Geek 2.0</span>
+          <p>
+            <span translate>Born with a keyboard and mouse</span>
+            <span style="text-decoration: line-through;" translate> to play videogames </span>
+            <span translate> to program, rest assured I found some times for other geek stuff too.</span>
+          </p>
+          <ul class="social social-circle">
+            <li><a href="#" target="_blank"><i class="iconmoon-twitter"></i></a></li>
+            <li><a href="#" target="_blank"><i class="iconmoon-facebook"></i></a></li>
+            <li><a href="https://github.com/wilsto" target="_blank"><i class="iconmoon-github"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class=" to-animate"  ng-class="{'fadeInUp animated': waypoints.about.on}" >
+          <iframe src="//www.tipeee.com/embed/project/116998" allowtransparency="true" width="100%" height="380" style="margin-top:-10px"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-<section id="ep2016-counters" style="background-image: url('assets/images/bg5.jpg');" data-stellar-background-ratio="0.5">
-    <div class="ep2016-overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 section-heading text-center to-animate">
-                <h2>Fun Facts</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="ep2016-counter to-animate">
-                    <i class="ep2016-counter-icon icon-game-controller to-animate-2"></i>
-                    <span class="ep2016-counter-number js-counter" data-from="0" data-to="{{vm.pronoCount}}" data-speed="5000" data-refresh-interval="50">{{vm.pronoCount}}</span>
-                    <span class="ep2016-counter-label" translate>Pronostics</span>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="ep2016-counter to-animate">
-                    <i class="ep2016-counter-icon iconmoon-code to-animate-2"></i>
-                    <span class="ep2016-counter-number js-counter" data-from="0" data-to="31535" data-speed="5000" data-refresh-interval="50">31535</span>
-                    <span class="ep2016-counter-label" translate>Line of codes</span>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="ep2016-counter to-animate">
-                    <i class="ep2016-counter-icon icon-cup to-animate-2"></i>
-                    <span class="ep2016-counter-number js-counter" data-from="0" data-to="{{vm.coffecup}}" data-speed="5000" data-refresh-interval="50">{{vm.coffecup}}</span>
-                    <span class="ep2016-counter-label" translate>Cup of coffees</span>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="ep2016-counter to-animate">
-                    <i class="ep2016-counter-icon icon-people to-animate-2"></i>
-                    <span class="ep2016-counter-number js-counter" data-from="0" data-to="{{vm.leagueCount}}" data-speed="5000" data-refresh-interval="50">{{vm.leagueCount}}</span>
-                    <span class="ep2016-counter-label" translate>Happy leagues</span>
-                </div>
-            </div>
-        </div>
+<section id="ep2016-counters" style="background-image: url('assets/images/bg5.jpg');" zum-waypoint="waypoints" down="counter.on" offset="80%">
+  <div class="ep2016-overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 section-heading text-center to-animate" ng-class="{'fadeInUp animated': waypoints.counter.on}">
+        <h2>Fun Facts</h2>
+      </div>
     </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="ep2016-counter to-animate" ng-class="{'fadeInUp animated': waypoints.counter.on}">
+          <i class="ep2016-counter-icon icon-game-controller to-animate-2" ng-class="{'fadeInUp animated': waypoints.counter.on}" ></i>
+          <span class="ep2016-counter-number js-counter" data-from="0" data-to="{{vm.pronoCount}}" data-speed="5000" data-refresh-interval="50">{{vm.pronoCount}}</span>
+          <span class="ep2016-counter-label" translate>Pronostics</span>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="ep2016-counter to-animate" ng-class="{'fadeInUp animated': waypoints.counter.on}">
+          <i class="ep2016-counter-icon iconmoon-code to-animate-2" ng-class="{'fadeInUp animated': waypoints.counter.on}" ></i>
+          <span class="ep2016-counter-number js-counter" data-from="0" data-to="31535" data-speed="5000" data-refresh-interval="50">31535</span>
+          <span class="ep2016-counter-label" translate>Line of codes</span>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="ep2016-counter to-animate" ng-class="{'fadeInUp animated': waypoints.counter.on}">
+          <i class="ep2016-counter-icon icon-cup to-animate-2" ng-class="{'fadeInUp animated': waypoints.counter.on}" ></i>
+          <span class="ep2016-counter-number js-counter" data-from="0" data-to="{{vm.coffecup}}" data-speed="5000" data-refresh-interval="50">{{vm.coffecup}}</span>
+          <span class="ep2016-counter-label" translate>Cup of coffees</span>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="ep2016-counter to-animate" ng-class="{'fadeInUp animated': waypoints.counter.on}">
+          <i class="ep2016-counter-icon icon-people to-animate-2" ng-class="{'fadeInUp animated': waypoints.counter.on}" ></i>
+          <span class="ep2016-counter-number js-counter" data-from="0" data-to="{{vm.leagueCount}}" data-speed="5000" data-refresh-interval="50">{{vm.leagueCount}}</span>
+          <span class="ep2016-counter-label" translate>Happy leagues</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 <footer></footer>

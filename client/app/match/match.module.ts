@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('euroProno2016WebApp.matchs', [
-    'euroProno2016WebApp.matchs',
+angular.module('worldProno2018App.matchs', [
+    'worldProno2018App.matchs',
     'ui.router'
 ]);

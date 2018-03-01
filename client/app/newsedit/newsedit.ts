@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('euroProno2016WebApp')
+angular.module('worldProno2018App')
   .config(function ($stateProvider) {
     $stateProvider
       .state('newsedit', {

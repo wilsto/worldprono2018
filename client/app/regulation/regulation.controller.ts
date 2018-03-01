@@ -14,7 +14,7 @@
         }
     }
 
-    angular.module('euroProno2016WebApp')
+    angular.module('worldProno2018App')
         .component('regulation', {
             templateUrl: 'app/regulation/regulation.html',
             controller: RegulationComponent,

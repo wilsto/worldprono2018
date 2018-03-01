@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('euroProno2016WebApp.teams')
+angular.module('worldProno2018App.teams')
     .config(function($stateProvider) {
         $stateProvider
             .state('team', {

@@ -7,7 +7,7 @@ class WorlCup2018Component {
   }
 }
 
-angular.module('euroProno2016WebApp')
+angular.module('worldProno2018App')
   .component('euro2016', {
     templateUrl: 'app/euro2016/euro2016.html',
     controller: WorlCup2018Component

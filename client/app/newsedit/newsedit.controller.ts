@@ -10,7 +10,7 @@
 
         types = [{
             id: 1,
-            name: '1- App EuroProno2016'
+            name: '1- App worldProno2018'
         }, {
             id: 2,
             name: '2- News Competition'
@@ -70,7 +70,7 @@
         }
     }
 
-    angular.module('euroProno2016WebApp')
+    angular.module('worldProno2018App')
         .component('newsedit', {
             templateUrl: 'app/newsedit/newsedit.html',
             controller: NewseditComponent,

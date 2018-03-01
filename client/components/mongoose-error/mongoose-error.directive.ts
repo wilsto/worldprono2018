@@ -3,7 +3,7 @@
 /**
  * Removes server error when user updates input
  */
-angular.module('euroProno2016WebApp')
+angular.module('worldProno2018App')
   .directive('mongooseError', function() {
     return {
       restrict: 'A',

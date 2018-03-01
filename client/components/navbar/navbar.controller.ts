@@ -22,7 +22,7 @@ class NavbarController {
         });
         this.burgerMenu();
         this.clickMenu();
-        this.navigationSection();
+        //this.navigationSection();
         this.windowScroll();
 
         this.currentPath = $location.path();
@@ -46,7 +46,7 @@ class NavbarController {
 
     // Page Nav
     clickMenu() {
-        $('#navbar a:not([class="external"])').click(function(event) {
+        $('#navbar a:not([class="external"])').on('click',function(event) {
             var section = $(this).data('nav-section'),
                 navbar = $('#navbar');
 
@@ -98,7 +98,7 @@ class NavbarController {
 
     // Window Scroll
     windowScroll() {
-        $(window).scroll(function(event) {
+        $(window).on('scroll',function(event) {
             var header = $('.ep2016-header'),
                 scrlTop = $(this).scrollTop(),
                 container = $('.navbar-container');
@@ -118,5 +118,5 @@ class NavbarController {
     }
 }
 
-angular.module('euroProno2016WebApp')
+angular.module('worldProno2018App')
     .controller('NavbarController', NavbarController);

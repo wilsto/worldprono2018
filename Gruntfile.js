@@ -324,7 +324,7 @@ module.exports = function(grunt) {
         // `server/config/environment/shared.js`
         ngconstant: {
             options: {
-                name: 'euroProno2016WebApp.constants',
+                name: 'worldProno2018App.constants',
                 dest: '<%= yeoman.client %>/app/app.constant.js',
                 deps: [],
                 wrap: true,
@@ -343,7 +343,7 @@ module.exports = function(grunt) {
         ngtemplates: {
             options: {
                 // This should be the name of your apps angular module
-                module: 'euroProno2016WebApp',
+                module: 'worldProno2018App',
                 htmlmin: {
                     collapseBooleanAttributes: true,
                     collapseWhitespace: true,

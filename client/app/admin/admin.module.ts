@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('euroProno2016WebApp.admin', [
-  'euroProno2016WebApp.auth',
+angular.module('worldProno2018App.admin', [
+  'worldProno2018App.auth',
   'ui.router'
 ]);

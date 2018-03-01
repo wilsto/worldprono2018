@@ -35,7 +35,7 @@
 
     }
 
-    angular.module('euroProno2016WebApp')
+    angular.module('worldProno2018App')
         .component('player', {
             templateUrl: 'app/player/player.html',
             controller: PlayerComponent,

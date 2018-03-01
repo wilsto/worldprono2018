@@ -3,7 +3,7 @@
 describe('Component: WorlCup2018Component', function () {
 
   // load the controller's module
-  beforeEach(module('euroProno2016WebApp'));
+  beforeEach(module('worldProno2018App'));
 
   var WorlCup2018Component, scope;
 

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('euroProno2016WebApp')
+angular.module('worldProno2018App')
   .directive('navbar', () => ({
     templateUrl: 'components/navbar/navbar.html',
     restrict: 'E',

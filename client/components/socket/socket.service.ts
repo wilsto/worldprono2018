@@ -1,7 +1,7 @@
 /* global io */
 'use strict';
 
-angular.module('euroProno2016WebApp')
+angular.module('worldProno2018App')
   .factory('socket', function(socketFactory) {
     // socket.io now auto-configures its connection when we ommit a connection url
     var ioSocket = io('', {

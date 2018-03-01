@@ -30,5 +30,5 @@ class LoginController {
     }
 }
 
-angular.module('euroProno2016WebApp')
+angular.module('worldProno2018App')
     .controller('LoginController', LoginController);

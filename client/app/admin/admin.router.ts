@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('euroProno2016WebApp.admin')
+angular.module('worldProno2018App.admin')
     .config(function($stateProvider) {
         $stateProvider
             .state('admin', {

@@ -79,7 +79,7 @@
 
     }
 
-    angular.module('euroProno2016WebApp')
+    angular.module('worldProno2018App')
         .component('arena', {
             templateUrl: 'app/arena/arena.html',
             controller: ArenaComponent,

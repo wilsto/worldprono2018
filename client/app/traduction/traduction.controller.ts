@@ -67,7 +67,7 @@
 
     }
 
-    angular.module('euroProno2016WebApp')
+    angular.module('worldProno2018App')
         .component('traduction', {
             templateUrl: 'app/traduction/traduction.html',
             controller: TraductionComponent,

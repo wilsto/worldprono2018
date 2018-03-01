@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('euroProno2016WebApp.teams', [
-  'euroProno2016WebApp.teams',
+angular.module('worldProno2018App.teams', [
+  'worldProno2018App.teams',
   'ui.router'
 ]);

@@ -61,7 +61,7 @@
 
     }
 
-    angular.module('euroProno2016WebApp.admin')
+    angular.module('worldProno2018App.admin')
         .controller('AdminController', AdminController);
 
 })();

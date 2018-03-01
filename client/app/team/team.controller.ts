@@ -54,7 +54,7 @@
     }
 
 
-    angular.module('euroProno2016WebApp.teams')
+    angular.module('worldProno2018App.teams')
         .controller('TeamController', TeamController);
 
 })();

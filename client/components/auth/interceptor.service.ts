@@ -26,7 +26,7 @@ function authInterceptor($rootScope, $q, $cookies, $injector, Util) {
   };
 }
 
-angular.module('euroProno2016WebApp.auth')
+angular.module('worldProno2018App.auth')
   .factory('authInterceptor', authInterceptor);
 
 })();

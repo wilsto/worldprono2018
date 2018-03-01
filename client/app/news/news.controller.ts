@@ -119,7 +119,7 @@
         }
     }
 
-    angular.module('euroProno2016WebApp')
+    angular.module('worldProno2018App')
         .component('news', {
             templateUrl: 'app/news/news.html',
             controller: NewsComponent,

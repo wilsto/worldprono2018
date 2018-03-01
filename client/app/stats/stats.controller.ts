@@ -200,7 +200,7 @@
             });
         }
     }
-    angular.module('euroProno2016WebApp')
+    angular.module('worldProno2018App')
         .component('stats', {
             templateUrl: 'app/stats/stats.html',
             controller: StatsComponent,

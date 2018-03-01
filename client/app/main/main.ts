@@ -1,7 +1,7 @@
 /// <reference path="../../typings/tsd.d.ts" />
 'use strict';
 
-angular.module('euroProno2016WebApp')
+angular.module('worldProno2018App')
     .config(function($stateProvider) {
         $stateProvider
             .state('main', {
@@ -13,7 +13,7 @@ angular.module('euroProno2016WebApp')
 ;
 (function() {
 
-    $(document).mouseup(function(e) {
+    $(document).on('mouseup',function(e) {
         var container = $('.login');
         // if the target of the click isn't the container...
         // ... nor a descendant of the container

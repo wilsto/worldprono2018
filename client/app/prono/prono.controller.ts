@@ -529,7 +529,7 @@
 
     }
 
-    angular.module('euroProno2016WebApp')
+    angular.module('worldProno2018App')
         .component('prono', {
             templateUrl: 'app/prono/prono.html',
             controller: PronoComponent,

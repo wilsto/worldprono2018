@@ -107,8 +107,8 @@
     "tslint": "^5.9.1"
   },
   "engines": {
-    "node": "^4.4.0",
-    "npm": "^2.14.20"
+    "node": "^6.11.1",
+    "npm": "^3.9.5"
   },
   "scripts": {
     "start": "node server",

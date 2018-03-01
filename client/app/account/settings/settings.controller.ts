@@ -114,5 +114,5 @@ class SettingsController {
     }
 }
 
-angular.module('euroProno2016WebApp')
+angular.module('worldProno2018App')
     .controller('SettingsController', SettingsController);

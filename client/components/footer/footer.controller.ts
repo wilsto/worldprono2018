@@ -19,5 +19,5 @@ class FooterController {
     }
 }
 
-angular.module('euroProno2016WebApp')
+angular.module('worldProno2018App')
     .controller('FooterController', FooterController);

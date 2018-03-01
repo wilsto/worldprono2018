@@ -185,7 +185,7 @@
         return Auth;
     }
 
-    angular.module('euroProno2016WebApp.auth')
+    angular.module('worldProno2018App.auth')
         .factory('Auth', AuthService);
 
 })();

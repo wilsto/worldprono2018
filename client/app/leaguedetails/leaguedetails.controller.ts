@@ -84,7 +84,7 @@
 
     }
 
-    angular.module('euroProno2016WebApp')
+    angular.module('worldProno2018App')
         .component('leaguedetails', {
             templateUrl: 'app/leaguedetails/leaguedetails.html',
             controller: LeaguedetailsComponent,

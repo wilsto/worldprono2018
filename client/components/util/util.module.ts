@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('euroProno2016WebApp.util', []);
+angular.module('worldProno2018App.util', []);

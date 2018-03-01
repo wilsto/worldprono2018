@@ -114,7 +114,7 @@
     }
 
 
-    angular.module('euroProno2016WebApp.matchs')
+    angular.module('worldProno2018App.matchs')
         .controller('MatchController', MatchController);
 
 })();
