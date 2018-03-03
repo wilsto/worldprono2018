@@ -7,9 +7,9 @@
 
     menu = [
       { name: 'Home', href: '/', section: '', ngclick: '', class: 'active', a_class: 'active' },
-      { name: 'WorlCup2018', href: '/news', section: '', ngclick: '', class: 'nothing', a_class: 'nothing' },
       { name: 'Prono', href: '/prono', section: '', ngclick: '', class: 'nothing', a_class: 'nothing' },
-      { name: 'Arena', href: '/arena', section: '', ngclick: '', class: 'nothing', a_class: 'nothing' }
+      { name: 'Arena', href: '/arena', section: '', ngclick: '', class: 'nothing', a_class: 'nothing' },
+      { name: 'WorlCup2018', href: '/news', section: '', ngclick: '', class: 'nothing', a_class: 'nothing' }
     ];
 
     constructor($http, $scope, Auth) {
