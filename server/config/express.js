@@ -43,7 +43,7 @@ export default function(app) {
     resave: false,
     store: new MongoStore({
       mongooseConnection: mongoose.connection,
-      db: 'euro-prono2016-web'
+      db: 'worldprono2018'
     })
   }));
 
