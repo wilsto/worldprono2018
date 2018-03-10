@@ -4,7 +4,7 @@
 
 [![Watch the video](https://github.com/wilsto/worldprono2018/blob/master/client/assets/images/YouTube_thumb.png)](https://youtu.be/qJ3eIZDXu9M)
 
-## Pour commencer test
+## Pour commencer
 Ce projet a été généré avec [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 3.5.0.
 
 - Build Systems: Grunt
