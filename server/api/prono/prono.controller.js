@@ -14,7 +14,7 @@ import Prono from './prono.model';
 import User from '../user/user.model';
 var ObjectId = require('mongoose').Types.ObjectId;
 
-/*var interval = setInterval(calculateScore, 60000);
+var interval = setInterval(calculateScore, 60000);
 calculateScore();
 
 function calculateScore() {
@@ -308,9 +308,7 @@ function calculateScore() {
               thisProno.bet.quarterFinals = allPointsQuarterFinals;
               thisProno.bet.semiFinals = allPointsSemiFinals;
               thisProno.bet.Finals = allPointsFinals;
-              thisProno.bet.winner = (teamWinner === euroWinner) ?
-                5 :
-                0;
+              thisProno.bet.winner = (teamWinner === euroWinner) ? 5 : 0;
               thisProno.bet.winnerDetails = (teamWinner === euroWinner) ? {
                 team: teamWinner,
                 euro: euroWinner
@@ -341,7 +339,7 @@ function calculateScore() {
   });
 
 }
-*/
+
 function respondWithResult(res, statusCode) {
   statusCode = statusCode || 200;
   return function(entity) {
