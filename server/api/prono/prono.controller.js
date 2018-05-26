@@ -14,7 +14,7 @@ import Prono from './prono.model';
 import User from '../user/user.model';
 var ObjectId = require('mongoose').Types.ObjectId;
 
-var interval = setInterval(calculateScore, 60000);
+/*var interval = setInterval(calculateScore, 60000);
 calculateScore();
 
 function calculateScore() {
@@ -341,7 +341,7 @@ function calculateScore() {
   });
 
 }
-
+*/
 function respondWithResult(res, statusCode) {
   statusCode = statusCode || 200;
   return function(entity) {
