@@ -1155,14 +1155,13 @@ tr.match {
 .countryflagmax.Mexico {
     background-position: -300px -400px;
 }
-.countryflagmax.Columbia {
+.countryflagmax.Colombia {
     background-position: -400px -400px;
 }
 
 .countryflagmax.Tunisia {
     background-position: -500px -400px;
 }
-
 
 .countryflagmax.England {
     background-position: 0 -500px;
@@ -1171,10 +1170,6 @@ tr.match {
 .countryflagmax.Panama {
     background-position: -100px -500px;
 }
-
-
-
-
 
 /* mini */
 
@@ -1234,7 +1229,7 @@ tr.match {
     background-position: -181px -0px;
 }
 
-.countryflags-mini.AUS {
+.countryflags-mini.Australia {
     background-position: -196px -0px;
 }
 
@@ -1394,7 +1389,7 @@ tr.match {
     background-position: -76px -126px;
 }
 
-.countryflags-mini.EGY {
+.countryflags-mini.Egypt {
     background-position: -166px -27px;
 }
 
@@ -1967,7 +1962,7 @@ tr.match {
     background-position: -136px -117px;
 }
 
-.countryflags-mini.URU {
+.countryflags-mini.Uruguay {
     background-position: -151px -117px;
 }
 
@@ -2043,7 +2038,7 @@ tr.match {
     background-position: -236px -0px;
 }
 
-.countryflags.ARG {
+.countryflags.Argentina {
     background-position: -262px -0px;
 }
 
@@ -2051,11 +2046,11 @@ tr.match {
     background-position: -288px -0px;
 }
 
-.countryflags.ARS {
+.countryflags.Saudi.Arabia  {
     background-position: -314px -0px;
 }
 
-.countryflags.AUS {
+.countryflags.Australia {
     background-position: -340px -0px;
 }
 
@@ -2107,7 +2102,7 @@ tr.match {
     background-position: -288px -16px;
 }
 
-.countryflags.BRE {
+.countryflags.Brazil{
     background-position: -314px -16px;
 }
 
@@ -2147,7 +2142,7 @@ tr.match {
     background-position: -184px -32px;
 }
 
-.countryflags.CDS {
+.countryflags.South.Korea {
     background-position: -210px -32px;
 }
 
@@ -2171,7 +2166,7 @@ tr.match {
     background-position: -340px -32px;
 }
 
-.countryflags.COL {
+.countryflags.Colombia {
     background-position: -2px -48px;
 }
 
@@ -2183,7 +2178,7 @@ tr.match {
     background-position: -54px -48px;
 }
 
-.countryflags.CRI {
+.countryflags.Costa.Rica{
     background-position: -80px -48px;
 }
 
@@ -2195,7 +2190,7 @@ tr.match {
     background-position: -132px -48px;
 }
 
-.countryflags.DAN {
+.countryflags.Denmark {
     background-position: -158px -48px;
 }
 
@@ -2215,7 +2210,7 @@ tr.match {
     background-position: -132px -224px;
 }
 
-.countryflags.EGY {
+.countryflags.Egypt {
     background-position: -288px -48px;
 }
 
@@ -2336,7 +2331,7 @@ tr.match {
     background-position: -314px -80px;
 }
 
-.countryflags.IRN {
+.countryflags.Iran {
     background-position: -340px -80px;
 }
 
@@ -2360,7 +2355,7 @@ tr.match {
     background-position: -106px -96px;
 }
 
-.countryflags.JAP {
+.countryflags.Japan {
     background-position: -132px -96px;
 }
 
@@ -2384,7 +2379,7 @@ tr.match {
     background-position: -262px -96px;
 }
 
-.countryflags.KOS {
+.countryflags.KOS{
     background-position: -288px -96px;
 }
 
@@ -2444,7 +2439,7 @@ tr.match {
     background-position: -262px -112px;
 }
 
-.countryflags.MAR {
+.countryflags.Morocco {
     background-position: -288px -112px;
 }
 
@@ -2460,7 +2455,7 @@ tr.match {
     background-position: -2px -128px;
 }
 
-.countryflags.MEX {
+.countryflags.Mexico {
     background-position: -28px -128px;
 }
 
@@ -2528,7 +2523,7 @@ tr.match {
     background-position: -80px -144px;
 }
 
-.countryflags.NIG {
+.countryflags.Nigeria {
     background-position: -106px -144px;
 }
 
@@ -2560,7 +2555,7 @@ tr.match {
     background-position: -262px -144px;
 }
 
-.countryflags.PAN {
+.countryflags.Panama {
     background-position: -288px -144px;
 }
 
@@ -2568,7 +2563,7 @@ tr.match {
     background-position: -314px -144px;
 }
 
-.countryflags.PER {
+.countryflags.Peru {
     background-position: -340px -144px;
 }
 
@@ -2644,11 +2639,11 @@ tr.match {
     background-position: -54px -176px;
 }
 
-.countryflags.SEN {
+.countryflags.Senegal {
     background-position: -80px -176px;
 }
 
-.countryflags.SER,
+.countryflags.Serbia,
 .countryflags.SRB {
     background-position: -106px -176px;
 }
@@ -2769,7 +2764,7 @@ tr.match {
     background-position: -106px -208px;
 }
 
-.countryflags.TUN {
+.countryflags.Tunisia {
     background-position: -132px -208px;
 }
 
@@ -2789,7 +2784,7 @@ tr.match {
     background-position: -236px -208px;
 }
 
-.countryflags.URU {
+.countryflags.Uruguay {
     background-position: -262px -208px;
 }
 
