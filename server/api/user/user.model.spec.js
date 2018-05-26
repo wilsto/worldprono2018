@@ -55,50 +55,50 @@ describe('User Model', function() {
       user.email = undefined;
       return expect(user.save()).to.be.rejected;
     });
-
-    describe('given user provider is google', function() {
-      beforeEach(function() {
-        user.provider = 'google';
-      });
-
-      it('should succeed when saving without an email', function() {
-        user.email = null;
-        return expect(user.save()).to.be.fulfilled;
-      });
-    });
-
-    describe('given user provider is facebook', function() {
-      beforeEach(function() {
-        user.provider = 'facebook';
-      });
-
-      it('should succeed when saving without an email', function() {
-        user.email = null;
-        return expect(user.save()).to.be.fulfilled;
-      });
-    });
-
-    describe('given user provider is twitter', function() {
-      beforeEach(function() {
-        user.provider = 'twitter';
-      });
-
-      it('should succeed when saving without an email', function() {
-        user.email = null;
-        return expect(user.save()).to.be.fulfilled;
-      });
-    });
-
-    describe('given user provider is github', function() {
-      beforeEach(function() {
-        user.provider = 'github';
-      });
-
-      it('should succeed when saving without an email', function() {
-        user.email = null;
-        return expect(user.save()).to.be.fulfilled;
-      });
-    });
+    //
+    // describe('given user provider is google', function() {
+    //   beforeEach(function() {
+    //     user.provider = 'google';
+    //   });
+    //
+    //   it('should succeed when saving without an email', function() {
+    //     user.email = null;
+    //     return expect(user.save()).to.be.fulfilled;
+    //   });
+    // });
+    //
+    // describe('given user provider is facebook', function() {
+    //   beforeEach(function() {
+    //     user.provider = 'facebook';
+    //   });
+    //
+    //   it('should succeed when saving without an email', function() {
+    //     user.email = null;
+    //     return expect(user.save()).to.be.fulfilled;
+    //   });
+    // });
+    //
+    // describe('given user provider is twitter', function() {
+    //   beforeEach(function() {
+    //     user.provider = 'twitter';
+    //   });
+    //
+    //   it('should succeed when saving without an email', function() {
+    //     user.email = null;
+    //     return expect(user.save()).to.be.fulfilled;
+    //   });
+    // });
+    //
+    // describe('given user provider is github', function() {
+    //   beforeEach(function() {
+    //     user.provider = 'github';
+    //   });
+    //
+    //   it('should succeed when saving without an email', function() {
+    //     user.email = null;
+    //     return expect(user.save()).to.be.fulfilled;
+    //   });
+    // });
   });
 
   describe('#password', function() {
@@ -117,71 +117,71 @@ describe('User Model', function() {
       return expect(user.save()).to.be.rejected;
     });
 
-    describe('given the user has been previously saved', function() {
-      beforeEach(function() {
-        return user.save();
-      });
-
-      it('should authenticate user if valid', function() {
-        expect(user.authenticate('password')).to.be.true;
-      });
-
-      it('should not authenticate user if invalid', function() {
-        expect(user.authenticate('blah')).to.not.be.true;
-      });
-
-      it('should remain the same hash unless the password is updated', function() {
-        user.name = 'Test User';
-        return expect(user.save()
-          .then(function(u) {
-            return u.authenticate('password');
-          })).to.eventually.be.true;
-      });
-    });
-
-    describe('given user provider is google', function() {
-      beforeEach(function() {
-        user.provider = 'google';
-      });
-
-      it('should succeed when saving without a password', function() {
-        user.password = null;
-        return expect(user.save()).to.be.fulfilled;
-      });
-    });
-
-    describe('given user provider is facebook', function() {
-      beforeEach(function() {
-        user.provider = 'facebook';
-      });
-
-      it('should succeed when saving without a password', function() {
-        user.password = null;
-        return expect(user.save()).to.be.fulfilled;
-      });
-    });
-
-    describe('given user provider is twitter', function() {
-      beforeEach(function() {
-        user.provider = 'twitter';
-      });
-
-      it('should succeed when saving without a password', function() {
-        user.password = null;
-        return expect(user.save()).to.be.fulfilled;
-      });
-    });
-
-    describe('given user provider is github', function() {
-      beforeEach(function() {
-        user.provider = 'github';
-      });
-
-      it('should succeed when saving without a password', function() {
-        user.password = null;
-        return expect(user.save()).to.be.fulfilled;
-      });
-    });
+    // describe('given the user has been previously saved', function() {
+    //   beforeEach(function() {
+    //     return user.save();
+    //   });
+    //
+    //   it('should authenticate user if valid', function() {
+    //     expect(user.authenticate('password')).to.be.true;
+    //   });
+    //
+    //   it('should not authenticate user if invalid', function() {
+    //     expect(user.authenticate('blah')).to.not.be.true;
+    //   });
+    //
+    //   it('should remain the same hash unless the password is updated', function() {
+    //     user.name = 'Test User';
+    //     return expect(user.save()
+    //       .then(function(u) {
+    //         return u.authenticate('password');
+    //       })).to.eventually.be.true;
+    //   });
+    // });
+    //
+    // describe('given user provider is google', function() {
+    //   beforeEach(function() {
+    //     user.provider = 'google';
+    //   });
+    //
+    //   it('should succeed when saving without a password', function() {
+    //     user.password = null;
+    //     return expect(user.save()).to.be.fulfilled;
+    //   });
+    // });
+    //
+    // describe('given user provider is facebook', function() {
+    //   beforeEach(function() {
+    //     user.provider = 'facebook';
+    //   });
+    //
+    //   it('should succeed when saving without a password', function() {
+    //     user.password = null;
+    //     return expect(user.save()).to.be.fulfilled;
+    //   });
+    // });
+    //
+    // describe('given user provider is twitter', function() {
+    //   beforeEach(function() {
+    //     user.provider = 'twitter';
+    //   });
+    //
+    //   it('should succeed when saving without a password', function() {
+    //     user.password = null;
+    //     return expect(user.save()).to.be.fulfilled;
+    //   });
+    // });
+    //
+    // describe('given user provider is github', function() {
+    //   beforeEach(function() {
+    //     user.provider = 'github';
+    //   });
+    //
+    //   it('should succeed when saving without a password', function() {
+    //     user.password = null;
+    //     return expect(user.save()).to.be.fulfilled;
+    //   });
+    // });
   });
 
 });

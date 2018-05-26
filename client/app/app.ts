@@ -28,7 +28,7 @@ angular.module('worldProno2018App', [
     $translateProvider.useUrlLoader('/api/traductions/loader');
     $translateProvider.preferredLanguage(navigator.language.substring(0, 2) || navigator.userLanguage.substring(0, 2) || 'en');
     // Enable escaping of HTML
-    $translateProvider.useSanitizeValueStrategy('sanitize');
+    //$translateProvider.useSanitizeValueStrategy('sanitize');
 
   })
 

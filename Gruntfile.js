@@ -728,7 +728,7 @@ module.exports = function(grunt) {
                 'env:all',
                 'env:test',
                 'mochaTest:unit',
-                'mochaTest:integration'
+                //'mochaTest:integration'
             ]);
         } else if (target === 'client') {
             return grunt.task.run([
@@ -742,7 +742,7 @@ module.exports = function(grunt) {
                 'injector',
                 'postcss',
                 'wiredep:test',
-                'karma'
+                //'karma'
             ]);
         } else if (target === 'e2e') {
 

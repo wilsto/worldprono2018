@@ -37,6 +37,7 @@
             this.$http.get('/api/matchs').then(responseMatchs => {
 
                 this.matchs = responseMatchs.data;
+                console.log('THIS.MATCHS', this.matchs)
 
                 // création des groupes à partir des infos matchs
                 this.groups = _.sortBy(_.uniq(_.map(this.matchs, element => {
@@ -323,7 +324,7 @@
             rank1GroupTeams.forEach(function(rank, index) {
                 if (rank === prevRank) {
                     if (!arrGroup[nbofGroup]) {
-                        arrGroup[nbofGroup] = new Array(); //créer 
+                        arrGroup[nbofGroup] = new Array(); //créer
                     }
                     if (missingFirst) {
                         arrGroup[nbofGroup].push(arrGroupTeams.slice(index - 1, index)[0]); // ajouter aussi le précédent
@@ -496,7 +497,7 @@
         //sauvegarde les pronos
         saveProno() {
             var dateNow = parseInt((Date.now() / 1000), 10);
-            if (dateNow > 1465585200) {
+            if (dateNow > 1529006400) {
                 bootbox.confirm('Attention des matchs ont déjà commencés ou sont déjà finis, ils seront exclus et non comptabilisés de votre classement si vous enregistez à nouveau.<br/><br/><span style="color:red"><b> Nous vous déconseillons de le faire, etes vous sur de vouloir continuer ? Si vous répondez "OK", votre choix est irrémédiable.</b></span>', (result) => {
                     console.log('result', result);
                     if (result) {
@@ -510,6 +511,7 @@
 
         saveInbase() {
             this.prono.matchs = this.matchs;
+            console.log('THIS.PRONO', this.prono)
             this.prono.date = Date.now();
             this.prono.user_id = this.getCurrentUser()._id;
             // si prono existe déjà
