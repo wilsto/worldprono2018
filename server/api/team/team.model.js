@@ -8,9 +8,8 @@ var TeamSchema = new Schema({
     code: String,
     name: String,
     group: String,
-    image: String,
-    players: mongoose.Schema.Types.Mixed,
-    comment: String
+    star: Number,
+    stats: mongoose.Schema.Types.Mixed
 });
 // ton schéma est crée
 module.exports = mongoose.model('Team', TeamSchema);

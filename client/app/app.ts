@@ -28,7 +28,7 @@ angular.module('worldProno2018App', [
     $translateProvider.useUrlLoader('/api/traductions/loader');
     $translateProvider.preferredLanguage(navigator.language.substring(0, 2) || navigator.userLanguage.substring(0, 2) || 'en');
     // Enable escaping of HTML
-    $translateProvider.useSanitizeValueStrategy('sanitize');
+    //$translateProvider.useSanitizeValueStrategy('sanitize');
 
   })
 
@@ -40,13 +40,12 @@ angular.module('worldProno2018App', [
 
     // Answer edited to include suggestions from comments
     // because previous version of code introduced browser-related errors
-/* tslint:disable:no-string-literal */
+
     //disable IE ajax request caching
     $httpProvider.defaults.headers.get['If-Modified-Since'] = 'Mon, 26 Jul 1997 05:00:00 GMT';
     // extra
     $httpProvider.defaults.headers.get['Cache-Control'] = 'no-cache';
     $httpProvider.defaults.headers.get['Pragma'] = 'no-cache';
-    /* tslint:enable:no-string-literal */
   }])
   .run(function($rootScope, $touch) {
     $rootScope.language = navigator.language.substring(0, 2) || navigator.userLanguage.substring(0, 2) || 'en';

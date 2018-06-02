@@ -9,18 +9,29 @@
         "client/test_typings/**/*.d.ts"
     ],
     "files": [
+        "client/app/arena/arena.controller.spec.ts",
+        "client/app/euro2016/euro2016.controller.spec.ts",
+        "client/app/league/league.controller.spec.ts",
         "client/app/main/main.controller.spec.ts",
+        "client/app/news/news.controller.spec.ts",
+        "client/app/newsedit/newsedit.controller.spec.ts",
+        "client/app/player/player.controller.spec.ts",
+        "client/app/prono/prono.controller.spec.ts",
+        "client/app/regulation/regulation.controller.spec.ts",
+        "client/app/rules/rules.controller.spec.ts",
+        "client/app/stats/stats.controller.spec.ts",
+        "client/app/traduction/traduction.controller.spec.ts",
         "client/components/oauth-buttons/oauth-buttons.controller.spec.ts",
         "client/components/oauth-buttons/oauth-buttons.directive.spec.ts",
         "client/components/socket/socket.mock.ts",
         "client/components/ui-router/ui-router.mock.ts",
         "client/test_typings/angular-protractor/angular-protractor.d.ts",
-        "client/test_typings/selenium-webdriver/selenium-webdriver.d.ts",
-        "client/test_typings/mocha/mocha.d.ts",
-        "client/test_typings/chai/chai.d.ts",
         "client/test_typings/assertion-error/assertion-error.d.ts",
-        "client/test_typings/sinon/sinon.d.ts",
+        "client/test_typings/chai/chai.d.ts",
+        "client/test_typings/mocha/mocha.d.ts",
+        "client/test_typings/selenium-webdriver/selenium-webdriver.d.ts",
         "client/test_typings/sinon-chai/sinon-chai.d.ts",
+        "client/test_typings/sinon/sinon.d.ts",
         "client/test_typings/tsd.d.ts"
     ]
 }

@@ -1,3 +1,4 @@
+/*jshint sub:true*/
 /**
  * Using Rails-like standard naming convention for endpoints.
  * GET     /api/pronos              ->  index
@@ -6,7 +7,6 @@
  * PUT     /api/pronos/:id          ->  update
  * DELETE  /api/pronos/:id          ->  destroy
  */
-
 'use strict';
 
 import _ from 'lodash';
@@ -22,9 +22,8 @@ function calculateScore() {
   Prono.findOne({
     'user_id': new ObjectId('57528b03ec21fa0300c23c86')
   }).exec((errpronosEuro, pronosEuro) => {
-
-
-    if (errpronosEuro !== null) { // si pas de prono de référence, gestion de l'exception
+    //console.log('errpronosEuro', errpronosEuro);
+    if (pronosEuro) {
       // Equipes qualifiés en 16ème
       var allTeamsRoundOf16 = _.compact(_.map(pronosEuro.matchs, function(match) {
         return (match.group === 'Round of 16') ? match.team1 : null;
@@ -107,7 +106,9 @@ function calculateScore() {
 
               // si le bon match
               if (pronoMatch.group.length > 1) {
-                blnGoodTeams = (pronoMatch.team1 === euroMatch.team1 && pronoMatch.team2 === euroMatch.team2) ? true : false;
+                blnGoodTeams = (pronoMatch.team1 === euroMatch.team1 && pronoMatch.team2 === euroMatch.team2) ?
+                  true :
+                  false;
                 if (QualifiedTeams[pronoMatch.group].indexOf(pronoMatch.team1) > -1) {
                   allPointsQualif[pronoMatch.group] = allPointsQualif[pronoMatch.group] + 2;
                   allTeamsQualif.push({
@@ -237,6 +238,7 @@ function calculateScore() {
 
               // Tour1
               var allPointsTour1 = _.compact(_.map(thisProno.matchs, function(match) {
+                console.log('MATCH', match)
                 return (match.typematch === 'Day 1') ? match.bet.points : 0;
               }));
               allPointsTour1 = _.reduce(allPointsTour1, function(s, entry) {
@@ -316,28 +318,23 @@ function calculateScore() {
               };
               thisProno.bet.points = allPoints + allPointsQualif['Round of 16'] + allPointsQualif['Quarter Finals'] + allPointsQualif['Semi Final'] + allPointsQualif['Final'] + thisProno.bet.winner;
 
-
               // mis à jour des pronos
               Prono.findOneAndUpdate({
-                  "_id": thisProno._id
-                }, {
-                  "$set": {
-                    "matchs": thisProno.matchs,
-                    "bet": thisProno.bet
-                  }
-                },
-                function(err, doc) {
-                  if (err) {
-                    console.log('err', err);
-                  }
+                "_id": thisProno._id
+              }, {
+                "$set": {
+                  "matchs": thisProno.matchs,
+                  "bet": thisProno.bet
                 }
-              );
+              }, function(err, doc) {
+                if (err) {
+                  console.log('err', err);
+                }
+              });
             }
           });
         });
       });
-    } else {
-      console.log('##########################    PAS DE PRONO DE REFERENCE   ###############################""');
     }
   });
 
@@ -356,20 +353,18 @@ function saveUpdates(updates) {
   return function(entity) {
     var updated = _.merge(entity, updates);
     updated.markModified('matchs');
-    return updated.save()
-      .then(updated => {
-        return updated;
-      });
+    return updated.save().then(updated => {
+      return updated;
+    });
   };
 }
 
 function removeEntity(res) {
   return function(entity) {
     if (entity) {
-      return entity.remove()
-        .then(() => {
-          return res.status(204).end();
-        });
+      return entity.remove().then(() => {
+        return res.status(204).end();
+      });
     }
   };
 }
@@ -393,42 +388,30 @@ function handleError(res, statusCode) {
 
 // Gets a list of Pronos
 export function index(req, res) {
-  return Prono.find({}).populate('user_id').exec()
-    .then(respondWithResult(res))
-    .catch(handleError(res));
+  return Prono.find({}).populate('user_id').exec().then(respondWithResult(res)).catch(handleError(res));
 }
 
 // Gets a count of Pronos
 export function count(req, res) {
-  return Prono.count({}).exec()
-    .then(respondWithResult(res))
-    .catch(handleError(res));
+  return Prono.count({}).exec().then(respondWithResult(res)).catch(handleError(res));
 }
 
 // Gets a single Prono from the DB
 export function show(req, res) {
-  return Prono.findById(req.params.id).populate('user_id').exec()
-    .then(handleEntityNotFound(res))
-    .then(respondWithResult(res))
-    .catch(handleError(res));
+  return Prono.findById(req.params.id).populate('user_id').exec().then(handleEntityNotFound(res)).then(respondWithResult(res)).catch(handleError(res));
 }
 
 // Gets a single Prono from the DB
 export function showUser(req, res) {
   return Prono.find({
-      user_id: req.params.id
-    }).populate('user_id').exec()
-    .then(handleEntityNotFound(res))
-    .then(respondWithResult(res))
-    .catch(handleError(res));
+    user_id: req.params.id
+  }).populate('user_id').exec().then(handleEntityNotFound(res)).then(respondWithResult(res)).catch(handleError(res));
 }
 
 // Creates a new Prono in the DB
 export function create(req, res) {
 
-  return Prono.create(req.body)
-    .then(respondWithResult(res, 201))
-    .catch(handleError(res));
+  return Prono.create(req.body).then(respondWithResult(res, 201)).catch(handleError(res));
 }
 
 // Updates an existing Prono in the DB
@@ -436,17 +419,10 @@ export function update(req, res) {
   if (req.body._id) {
     delete req.body._id;
   }
-  return Prono.findById(req.params.id).exec()
-    .then(handleEntityNotFound(res))
-    .then(saveUpdates(req.body))
-    .then(respondWithResult(res))
-    .catch(handleError(res));
+  return Prono.findById(req.params.id).exec().then(handleEntityNotFound(res)).then(saveUpdates(req.body)).then(respondWithResult(res)).catch(handleError(res));
 }
 
 // Deletes a Prono from the DB
 export function destroy(req, res) {
-  return Prono.findById(req.params.id).exec()
-    .then(handleEntityNotFound(res))
-    .then(removeEntity(res))
-    .catch(handleError(res));
+  return Prono.findById(req.params.id).exec().then(handleEntityNotFound(res)).then(removeEntity(res)).catch(handleError(res));
 }
