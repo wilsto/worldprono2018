@@ -31,6 +31,8 @@ module.exports = function(config) {
       'client/bower_components/angular-translate-loader-url/angular-translate-loader-url.js',
       'client/bower_components/angular-ui-router/release/angular-ui-router.js',
       'client/bower_components/angular-validation-match/dist/angular-validation-match.min.js',
+      'client/bower_components/waypoints/lib/noframework.waypoints.js',
+      'client/bower_components/angular-waypoints/dist/angular-waypoints.js',
       'client/bower_components/jquery/dist/jquery.js',
       'client/bower_components/bootstrap/dist/js/bootstrap.js',
       'client/bower_components/lodash/dist/lodash.compat.js',
