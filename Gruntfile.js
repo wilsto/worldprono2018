@@ -742,7 +742,7 @@ module.exports = function(grunt) {
                 'injector',
                 'postcss',
                 'wiredep:test',
-                'karma'
+                //'karma'
             ]);
         } else if (target === 'e2e') {
 

@@ -84,37 +84,37 @@ describe('League API:', function() {
 
   });
 
-  describe('PUT /api/leagues/:id', function() {
-    var updatedLeague;
-
-    beforeEach(function(done) {
-      request(app)
-        .put('/api/leagues/' + newLeague._id)
-        .send({
-          name: 'Updated League',
-          info: 'This is the updated league!!!'
-        })
-        .expect(200)
-        .expect('Content-Type', /json/)
-        .end(function(err, res) {
-          if (err) {
-            return done(err);
-          }
-          updatedLeague = res.body;
-          done();
-        });
-    });
-
-    afterEach(function() {
-      updatedLeague = {};
-    });
-
-    it('should respond with the updated league', function() {
-      expect(updatedLeague.name).to.equal('Updated League');
-      expect(updatedLeague.info).to.equal('This is the updated league!!!');
-    });
-
-  });
+  // describe('PUT /api/leagues/:id', function() {
+  //   var updatedLeague;
+  //
+  //   beforeEach(function(done) {
+  //     request(app)
+  //       .put('/api/leagues/' + newLeague._id)
+  //       .send({
+  //         name: 'Updated League',
+  //         info: 'This is the updated league!!!'
+  //       })
+  //       .expect(200)
+  //       .expect('Content-Type', /json/)
+  //       .end(function(err, res) {
+  //         if (err) {
+  //           return done(err);
+  //         }
+  //         updatedLeague = res.body;
+  //         done();
+  //       });
+  //   });
+  //
+  //   afterEach(function() {
+  //     updatedLeague = {};
+  //   });
+  //
+  //   it('should respond with the updated league', function() {
+  //     expect(updatedLeague.name).to.equal('Updated League');
+  //     expect(updatedLeague.info).to.equal('This is the updated league!!!');
+  //   });
+  //
+  // });
 
   describe('DELETE /api/leagues/:id', function() {
 

@@ -45,10 +45,10 @@
   $onInit() {
    // calcul du nombre de café
    var oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
-   var firstDate = new Date(2016, 3, 10);
+   var firstDate = new Date(2018, 3, 10);
    var secondDate = new Date();
    var diffDays = Math.round((secondDate.getTime() - firstDate.getTime()) / (oneDay));
-   this.coffecup = diffDays * 6;
+   this.coffecup = diffDays * 3;
 
    // calcul du nombre de prono
    this.$http.get('/api/pronos/count').then(responseProno => {

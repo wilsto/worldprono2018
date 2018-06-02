@@ -83,38 +83,38 @@ describe('Prono API:', function() {
     });
 
   });
-
-  describe('PUT /api/pronos/:id', function() {
-    var updatedProno;
-
-    beforeEach(function(done) {
-      request(app)
-        .put('/api/pronos/' + newProno._id)
-        .send({
-          name: 'Updated Prono',
-          info: 'This is the updated prono!!!'
-        })
-        .expect(200)
-        .expect('Content-Type', /json/)
-        .end(function(err, res) {
-          if (err) {
-            return done(err);
-          }
-          updatedProno = res.body;
-          done();
-        });
-    });
-
-    afterEach(function() {
-      updatedProno = {};
-    });
-
-    it('should respond with the updated prono', function() {
-      expect(updatedProno.name).to.equal('Updated Prono');
-      expect(updatedProno.info).to.equal('This is the updated prono!!!');
-    });
-
-  });
+  //
+  // describe('PUT /api/pronos/:id', function() {
+  //   var updatedProno;
+  //
+  //   beforeEach(function(done) {
+  //     request(app)
+  //       .put('/api/pronos/' + newProno._id)
+  //       .send({
+  //         name: 'Updated Prono',
+  //         info: 'This is the updated prono!!!'
+  //       })
+  //       .expect(200)
+  //       .expect('Content-Type', /json/)
+  //       .end(function(err, res) {
+  //         if (err) {
+  //           return done(err);
+  //         }
+  //         updatedProno = res.body;
+  //         done();
+  //       });
+  //   });
+  //
+  //   afterEach(function() {
+  //     updatedProno = {};
+  //   });
+  //
+  //   it('should respond with the updated prono', function() {
+  //     expect(updatedProno.name).to.equal('Updated Prono');
+  //     expect(updatedProno.info).to.equal('This is the updated prono!!!');
+  //   });
+  //
+  // });
 
   describe('DELETE /api/pronos/:id', function() {
 
