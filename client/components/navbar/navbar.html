@@ -3,11 +3,12 @@
         <!-- Mobile Toggle Menu Button -->
         <a href="#" class="js-ep2016-nav-toggle ep2016-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
         <a class="navbar-brand" href="index.html">WorldProno 2018</a>
+        <br>
+        <span ng-hide="nav.isLoggedIn()"><span><a href="/login" class="external"> <span class="login-button" translate>Login</span></a> <span class="login-button"> | </span> <a href="/signup" class="external" > <span translate>Register</span></a></span></span>
+        <span ng-show="nav.isLoggedIn()"><a href="#" ng-click="nav.login_click()"><span class="login-button" style="float:right"> {{ nav.getCurrentUser().name }} <i class="glyphicon glyphicon-cog"></i> </span></a></li>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-            <li ng-hide="nav.isLoggedIn()"><span><a href="/login" class="external" >Login</a> | <a href="/signup" class="external" >Register</a></span></li>
-            <li ng-show="nav.isLoggedIn()"><a href="#" ng-click="nav.login_click()">{{ nav.getCurrentUser().name }} <i class="glyphicon glyphicon-cog"></i> </a></li>
             <li ng-hide="nav.currentPath !== '/' || 1===1">
                 <a ng-click="vm.toggle_audio()"><i class="glyphicon glyphicon-volume-down" ng-if="vm.audioOn"></i><i class="glyphicon glyphicon-volume-off" ng-if="!vm.audioOn"></i></a>
             </li>
@@ -16,7 +17,7 @@
             </li>
         </ul>
     </div>
-    <div class="login">
+    <div class="login" id="login_menu">
         <div class="arrow-up"></div>
         <div class="formholder">
             <div class="wrap">

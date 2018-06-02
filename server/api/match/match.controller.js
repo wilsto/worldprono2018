@@ -7,7 +7,7 @@ var Match = require('./match.model');
 exports.index = function(req, res) {
   Match.find(function (err, matchs) {
     if(err) { return handleError(res, err); }
-    return res.json(200, matchs);
+    return res.status(200).json(matchs);
   });
 };
 
@@ -16,7 +16,7 @@ exports.show = function(req, res) {
   Match.findById(req.params.id, function (err, match) {
     if(err) { return handleError(res, err); }
     if(!match) { return res.send(404); }
-    return res.json(match);
+    return res.status(200).json(match);
   });
 };
 
@@ -24,7 +24,7 @@ exports.show = function(req, res) {
 exports.create = function(req, res) {
   Match.create(req.body, function(err, match) {
     if(err) { return handleError(res, err); }
-    return res.json(201, match);
+    return res.status(201).json(match);
   });
 };
 
@@ -37,7 +37,7 @@ exports.update = function(req, res) {
     var updated = _.merge(match, req.body);
     updated.save(function (err) {
       if (err) { return handleError(res, err); }
-      return res.json(200, match);
+      return res.status(200).json(match);
     });
   });
 };

@@ -1047,108 +1047,129 @@ tr.match {
 }
 
 .countryflagmax {
-    width: 50px;
-    height: 50px;
-    background: url('../../assets/images/countryflags-max.png') no-repeat;
-    background-size: 250px 250px;
-}
-
-.countryflagmax.France {
-    background-position: 0 0;
+    width: 100px;
+    height: 100px;
+    background: url('../../assets/images/cflags-max.png') no-repeat;
+    background-size: 600px 600px;
 }
 
 .countryflagmax.Switzerland {
-    background-position: 0 -50px;
+    background-position: 0 0;
 }
 
-.countryflagmax.Russia {
-    background-position: 0 -100px;
+.countryflagmax.South.Korea {
+    background-position: -100px -0px;
 }
 
-.countryflagmax.Republic.of.Ireland {
-    background-position: 0 -150px;
-}
-
-.countryflagmax.Ukraine {
-    background-position: 0 -200px;
-}
-
-.countryflagmax.Romania {
-    background-position: -50px 0;
-}
-
-.countryflagmax.Wales {
-    background-position: -50px -50px;
-}
-
-.countryflagmax.Poland {
-    background-position: -50px -100px;
-}
-
-.countryflagmax.Belgium {
-    background-position: -50px -150px;
-}
-
-.countryflagmax.Austria {
-    background-position: -50px -200px;
-}
-
-.countryflagmax.Albania {
-    background-position: -100px 0;
-}
-
-.countryflagmax.Croatia {
-    background-position: -100px -50px;
-}
-
-.countryflagmax.Sweden {
-    background-position: -100px -100px;
-}
-
-.countryflagmax.Germany {
-    background-position: -100px -150px;
-}
-
-.countryflagmax.Portugal {
-    background-position: -100px -200px;
-}
-
-.countryflagmax.Slovakia {
-    background-position: -150px 0;
-}
-
-.countryflagmax.Turkey {
-    background-position: -150px -50px;
-}
-
-.countryflagmax.Spain {
-    background-position: -150px -100px;
-}
-
-.countryflagmax.Hungary {
-    background-position: -150px -150px;
-}
-
-.countryflagmax.Iceland {
-    background-position: -150px -200px;
-}
-
-.countryflagmax.England {
+.countryflagmax.France {
     background-position: -200px 0px;
 }
 
-.countryflagmax.Northern.Ireland {
-    background-position: -200px -50px;
+.countryflagmax.Belgium {
+    background-position: -300px -0px;
 }
 
-.countryflagmax.Czech.Republic {
+.countryflagmax.Japan {
+    background-position: -400px 0px;
+}
+
+.countryflagmax.Germany {
+    background-position: -500px -0px;
+}
+
+.countryflagmax.Brazil {
+    background-position: 0 -100px;
+}
+
+.countryflagmax.Saudi.Arabia {
+    background-position: -100px -100px;
+}
+.countryflagmax.Russia {
     background-position: -200px -100px;
 }
-
-.countryflagmax.Italy {
-    background-position: -200px -150px;
+.countryflagmax.Uruguay {
+    background-position: -300px -100px;
+}
+.countryflagmax.Egypt {
+    background-position: -400px -100px;
+}
+.countryflagmax.Morocco {
+    background-position: -500px -100px;
 }
 
+.countryflagmax.Australia {
+    background-position: 0 -200px;
+}
+
+.countryflagmax.Sweden {
+    background-position: -100px -200px;
+}
+
+.countryflagmax.Iran {
+    background-position: -200px -200px;
+}
+.countryflagmax.Spain {
+    background-position: -300px -200px;
+}
+
+.countryflagmax.Argentina {
+    background-position: -400px -200px;
+}
+
+.countryflagmax.Denmark {
+    background-position: -500px -200px;
+}
+
+.countryflagmax.Nigeria {
+    background-position: 0 -300px;
+}
+
+.countryflagmax.Croatia {
+    background-position: -100px -300px;
+}
+.countryflagmax.Iceland {
+    background-position: -200px -300px;
+}
+
+.countryflagmax.Peru {
+    background-position: -300px -300px;
+}
+.countryflagmax.Senegal {
+    background-position: -400px -300px;
+}
+.countryflagmax.Poland {
+    background-position: -500px -300px;
+}
+
+.countryflagmax.Serbia {
+    background-position: 0 -400px;
+}
+
+.countryflagmax.Costa.Rica {
+    background-position: -100px -400px;
+}
+
+.countryflagmax.Portugal {
+    background-position: -200px -400px;
+}
+.countryflagmax.Mexico {
+    background-position: -300px -400px;
+}
+.countryflagmax.Colombia {
+    background-position: -400px -400px;
+}
+
+.countryflagmax.Tunisia {
+    background-position: -500px -400px;
+}
+
+.countryflagmax.England {
+    background-position: 0 -500px;
+}
+
+.countryflagmax.Panama {
+    background-position: -100px -500px;
+}
 
 /* mini */
 
@@ -1208,7 +1229,7 @@ tr.match {
     background-position: -181px -0px;
 }
 
-.countryflags-mini.AUS {
+.countryflags-mini.Australia {
     background-position: -196px -0px;
 }
 
@@ -1368,7 +1389,7 @@ tr.match {
     background-position: -76px -126px;
 }
 
-.countryflags-mini.EGY {
+.countryflags-mini.Egypt {
     background-position: -166px -27px;
 }
 
@@ -1941,7 +1962,7 @@ tr.match {
     background-position: -136px -117px;
 }
 
-.countryflags-mini.URU {
+.countryflags-mini.Uruguay {
     background-position: -151px -117px;
 }
 
@@ -2017,7 +2038,7 @@ tr.match {
     background-position: -236px -0px;
 }
 
-.countryflags.ARG {
+.countryflags.Argentina {
     background-position: -262px -0px;
 }
 
@@ -2025,11 +2046,11 @@ tr.match {
     background-position: -288px -0px;
 }
 
-.countryflags.ARS {
+.countryflags.Saudi.Arabia  {
     background-position: -314px -0px;
 }
 
-.countryflags.AUS {
+.countryflags.Australia {
     background-position: -340px -0px;
 }
 
@@ -2081,7 +2102,7 @@ tr.match {
     background-position: -288px -16px;
 }
 
-.countryflags.BRE {
+.countryflags.Brazil{
     background-position: -314px -16px;
 }
 
@@ -2121,7 +2142,7 @@ tr.match {
     background-position: -184px -32px;
 }
 
-.countryflags.CDS {
+.countryflags.South.Korea {
     background-position: -210px -32px;
 }
 
@@ -2145,7 +2166,7 @@ tr.match {
     background-position: -340px -32px;
 }
 
-.countryflags.COL {
+.countryflags.Colombia {
     background-position: -2px -48px;
 }
 
@@ -2157,7 +2178,7 @@ tr.match {
     background-position: -54px -48px;
 }
 
-.countryflags.CRI {
+.countryflags.Costa.Rica{
     background-position: -80px -48px;
 }
 
@@ -2169,7 +2190,7 @@ tr.match {
     background-position: -132px -48px;
 }
 
-.countryflags.DAN {
+.countryflags.Denmark {
     background-position: -158px -48px;
 }
 
@@ -2189,7 +2210,7 @@ tr.match {
     background-position: -132px -224px;
 }
 
-.countryflags.EGY {
+.countryflags.Egypt {
     background-position: -288px -48px;
 }
 
@@ -2310,7 +2331,7 @@ tr.match {
     background-position: -314px -80px;
 }
 
-.countryflags.IRN {
+.countryflags.Iran {
     background-position: -340px -80px;
 }
 
@@ -2334,7 +2355,7 @@ tr.match {
     background-position: -106px -96px;
 }
 
-.countryflags.JAP {
+.countryflags.Japan {
     background-position: -132px -96px;
 }
 
@@ -2358,7 +2379,7 @@ tr.match {
     background-position: -262px -96px;
 }
 
-.countryflags.KOS {
+.countryflags.KOS{
     background-position: -288px -96px;
 }
 
@@ -2418,7 +2439,7 @@ tr.match {
     background-position: -262px -112px;
 }
 
-.countryflags.MAR {
+.countryflags.Morocco {
     background-position: -288px -112px;
 }
 
@@ -2434,7 +2455,7 @@ tr.match {
     background-position: -2px -128px;
 }
 
-.countryflags.MEX {
+.countryflags.Mexico {
     background-position: -28px -128px;
 }
 
@@ -2502,7 +2523,7 @@ tr.match {
     background-position: -80px -144px;
 }
 
-.countryflags.NIG {
+.countryflags.Nigeria {
     background-position: -106px -144px;
 }
 
@@ -2534,7 +2555,7 @@ tr.match {
     background-position: -262px -144px;
 }
 
-.countryflags.PAN {
+.countryflags.Panama {
     background-position: -288px -144px;
 }
 
@@ -2542,7 +2563,7 @@ tr.match {
     background-position: -314px -144px;
 }
 
-.countryflags.PER {
+.countryflags.Peru {
     background-position: -340px -144px;
 }
 
@@ -2618,11 +2639,11 @@ tr.match {
     background-position: -54px -176px;
 }
 
-.countryflags.SEN {
+.countryflags.Senegal {
     background-position: -80px -176px;
 }
 
-.countryflags.SER,
+.countryflags.Serbia,
 .countryflags.SRB {
     background-position: -106px -176px;
 }
@@ -2743,7 +2764,7 @@ tr.match {
     background-position: -106px -208px;
 }
 
-.countryflags.TUN {
+.countryflags.Tunisia {
     background-position: -132px -208px;
 }
 
@@ -2763,7 +2784,7 @@ tr.match {
     background-position: -236px -208px;
 }
 
-.countryflags.URU {
+.countryflags.Uruguay {
     background-position: -262px -208px;
 }
 

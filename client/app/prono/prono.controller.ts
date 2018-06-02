@@ -69,11 +69,9 @@
       this.$http.get('/api/pronos/user_id/' + this.playerId).then(responseProno => {
         if (responseProno.data[0] !== undefined) {
           this.prono = responseProno.data[0];
-          console.log('load prono ', this.prono);
           this.toUpdate = true;
           this.mergeByProperty(this.matchs, this.prono.matchs, '_id');
         } else {
-          console.log('new prono ');
           this.prono = { user_id: this.getCurrentUser()._id, date: Date.now() };
           this.mergeByProperty(this.matchs, this.matchs, '_id');
           this.toUpdate = false;
@@ -84,13 +82,12 @@
               return that.calculGroup(group.name);
             }
           });
-          that.calculThirdQualified();
           _.map(that.groups, group => {
             if (group.name.length > 2) {
               return that.calculQualified(group.name);
             }
           });
-        }, 500);
+        }, 50);
 
       });
     }
@@ -224,7 +221,7 @@
         team.diff = sumTeam2.diff + sumTeam1.diff;
       });
 
-      if (_.contains(['A', 'B', 'C', 'D', 'E', 'F'], groupName)) {
+      if (_.contains(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'], groupName)) {
 
         //ordre du groupe selon les règles fifa
         that.groupTeams = that.sortGroupOrder(that.groupTeams);
@@ -233,33 +230,27 @@
         that.nbmatchs = _.compact(_.pluck(that.groupMatchs, 'score1')).length + _.compact(_.pluck(that.groupMatchs, 'score2')).length;
         if (that.nbmatchs === 12) {
           that.winnerGroupMatch = _.filter(this.matchs, match => {
-            return match.teamId1 === 'Winner ' + groupName || match.teamId2 === 'Winner ' + groupName;
+            return match.teamId1 === 'First ' + groupName || match.teamId2 === 'First ' + groupName;
           });
           if (that.winnerGroupMatch[0] !== undefined) {
             that.winnerGroupMatch[0].team1 = that.groupTeams[0].name;
           }
 
           that.RunnerupGroup1 = _.filter(this.matchs, match => {
-            return match.teamId1 === 'Runner-up ' + groupName;
+            return match.teamId1 === 'Second ' + groupName;
           });
           if (that.RunnerupGroup1[0] !== undefined) {
             that.RunnerupGroup1[0].team1 = that.groupTeams[1].name;
           }
 
           that.RunnerupGroup2 = _.filter(this.matchs, match => {
-            return match.teamId2 === 'Runner-up ' + groupName;
+            return match.teamId2 === 'Second ' + groupName;
           });
           if (that.RunnerupGroup2[0] !== undefined) {
             that.RunnerupGroup2[0].team2 = that.groupTeams[1].name;
           }
 
-          // supprimer si déjà présent
-          _.remove(this.groupThird, { group: groupName });
-          this.groupThird.push(that.groupTeams[2]);
-        } else {
-          _.remove(this.groupThird, { group: groupName });
         }
-        this.calculThirdQualified();
       } else {
         this.calculQualified(groupName);
       }
@@ -419,49 +410,6 @@
       return ranks;
     }
 
-    calculThirdQualified() {
-      //ordre de tri selon les règles fifa
-      this.groupThird = _.sortBy(this.groupThird, ['points', 'diff', 'bp', 'fairplay', 'fifa']).reverse();
-      var qualified = _.pluck(this.groupThird.slice(0, 4), 'group').sort().join('');
-
-      // coder http://euro2016-france.net/wp-content/uploads/huitieme-finale-euro-2016-12.jpg
-      var arrayThird = {
-        ABCD: { A: 'C', B: 'D', C: 'A', D: 'B' },
-        ABCE: { A: 'C', B: 'A', C: 'B', D: 'E' },
-        ABCF: { A: 'C', B: 'A', C: 'B', D: 'F' },
-        ABDE: { A: 'D', B: 'A', C: 'B', D: 'E' },
-        ABDF: { A: 'D', B: 'A', C: 'B', D: 'F' },
-        ABEF: { A: 'E', B: 'A', C: 'B', D: 'F' },
-        ACDE: { A: 'C', B: 'D', C: 'A', D: 'E' },
-        ACDF: { A: 'C', B: 'D', C: 'A', D: 'F' },
-        ACEF: { A: 'C', B: 'A', C: 'F', D: 'E' },
-        ADEF: { A: 'D', B: 'A', C: 'F', D: 'E' },
-        BCDE: { A: 'C', B: 'D', C: 'B', D: 'E' },
-        BCDF: { A: 'C', B: 'D', C: 'B', D: 'F' },
-        BCEF: { A: 'E', B: 'C', C: 'B', D: 'F' },
-        BDEF: { A: 'E', B: 'D', C: 'B', D: 'F' },
-        CDEF: { A: 'C', B: 'D', C: 'F', D: 'E' },
-      };
-
-      var matchVsWinner = {};
-      var teamVsWinner = {};
-
-      // pour chaque groupe
-      if (this.groupThird.length === 6) {
-        _.map(['A', 'B', 'C', 'D'], groupname => {
-          matchVsWinner[groupname] = _.filter(this.matchs, { 'teamId1': 'Winner ' + groupname }); // le match versus le winner correspondant
-          teamVsWinner[groupname] = _.filter(this.groupThird, { 'group': arrayThird[qualified][groupname] }); // le nom de l'équipe récupéré du tableau
-          matchVsWinner[groupname][0].team2 = teamVsWinner[groupname][0].name; // tada !!
-        });
-      } else {
-        _.map(['A', 'B', 'C', 'D'], groupname => {
-          matchVsWinner[groupname] = _.filter(this.matchs, { 'teamId1': 'Winner ' + groupname }); // le match versus le winner correspondant
-          matchVsWinner[groupname][0].team2 = matchVsWinner[groupname][0].teamId2; // tada !!
-        });
-      }
-    }
-
-
     calculQualified(group) {
       var matchsGroup = _.filter(this.matchs, { 'group': group }); // les match du groupe
       _.map(matchsGroup, match => {
@@ -486,7 +434,6 @@
     //sauvegarde les pronos
     resetProno() {
       this.$http.delete('/api/pronos/' + this.prono._id).then(response => {
-        console.log('prono deleted', response);
         this.loadMatchs();
         this.loadProno();
         this.teamWinner = null;
@@ -496,9 +443,8 @@
     //sauvegarde les pronos
     saveProno() {
       var dateNow = parseInt((Date.now() / 1000), 10);
-      if (dateNow > 1465585200) {
+      if (dateNow > 1529006400) {
         bootbox.confirm('Attention des matchs ont déjà commencés ou sont déjà finis, ils seront exclus et non comptabilisés de votre classement si vous enregistez à nouveau.<br/><br/><span style="color:red"><b> Nous vous déconseillons de le faire, etes vous sur de vouloir continuer ? Si vous répondez "OK", votre choix est irrémédiable.</b></span>', (result) => {
-          console.log('result', result);
           if (result) {
             this.saveInbase();
           }
@@ -515,14 +461,12 @@
       // si prono existe déjà
       if (this.toUpdate) {
         this.$http.put('/api/pronos/' + this.prono._id, this.prono).then(response => {
-          console.log('prono updated', response);
           this.loadProno();
         });
       } else {
         // sinon on crèe les pronos
         this.$http.post('/api/pronos', this.prono).then(response => {
           this.toUpdate = true;
-          console.log('prono created', response);
         });
       }
     }
