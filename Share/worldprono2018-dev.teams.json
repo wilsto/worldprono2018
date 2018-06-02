@@ -1,0 +1,576 @@
+{ 
+    "_id" : ObjectId("5aa196eda029441fdc9150d0"), 
+    "__v" : NumberInt(0), 
+    "code" : "A1", 
+    "group" : "A", 
+    "name" : "Egypt", 
+    "star" : NumberInt(0), 
+    "stats" : [
+        {
+            "titles" : "0", 
+            "fifaRank" : "31", 
+            "final" : "0", 
+            "semifinals" : "0", 
+            "firstage" : "2", 
+            "bestA" : "First stage 1934, 1990"
+        }
+    ]
+}
+{ 
+    "_id" : ObjectId("57248ba31390bc546b7b1902"), 
+    "code" : "B1", 
+    "name" : "Iran", 
+    "group" : "B", 
+    "__v" : NumberInt(0), 
+    "stats" : [
+        {
+            "titles" : "0", 
+            "fifaRank" : "32", 
+            "final" : "0", 
+            "semifinals" : "0", 
+            "firstage" : "4", 
+            "bestA" : "First stage 1978, 1998, 2006, 2014"
+        }
+    ], 
+    "star" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5aa25da1a029441fdc915107"), 
+    "__v" : NumberInt(0), 
+    "code" : "E4", 
+    "group" : "E", 
+    "star" : NumberInt(0), 
+    "name" : "Serbia", 
+    "stats" : [
+        {
+            "titles" : "0", 
+            "fifaRank" : "37", 
+            "final" : "0", 
+            "semifinals" : "2", 
+            "firstage" : "11", 
+            "bestA" : "4th place 1930, 196"
+        }
+    ]
+}
+{ 
+    "_id" : ObjectId("5aa25f2ba029441fdc915111"), 
+    "__v" : NumberInt(0), 
+    "code" : "F3", 
+    "group" : "F", 
+    "name" : "Mexico", 
+    "star" : NumberInt(0), 
+    "stats" : [
+        {
+            "titles" : "0", 
+            "fifaRank" : "16", 
+            "final" : "0", 
+            "semifinals" : "0", 
+            "firstage" : "15", 
+            "bestA" : "Quarter-finals 1970, 1986"
+        }
+    ]
+}
+{ 
+    "_id" : ObjectId("5aa25f6ea029441fdc915118"), 
+    "code" : "G3", 
+    "__v" : NumberInt(0), 
+    "group" : "G", 
+    "star" : NumberInt(0), 
+    "name" : "Panama", 
+    "stats" : [
+        {
+            "titles" : "0", 
+            "fifaRank" : "56", 
+            "final" : "0", 
+            "semifinals" : "0", 
+            "firstage" : "0", 
+            "bestA" : ""
+        }
+    ]
+}
+{ 
+    "_id" : ObjectId("5aa25f9ca029441fdc915120"), 
+    "code" : "G4", 
+    "group" : "G", 
+    "star" : NumberInt(0), 
+    "name" : "Tunisia", 
+    "__v" : NumberInt(0), 
+    "stats" : [
+        {
+            "titles" : "0", 
+            "fifaRank" : "47", 
+            "final" : "0", 
+            "semifinals" : "0", 
+            "firstage" : "4", 
+            "bestA" : "Group stage 1978, 1998, 2002, 2006"
+        }
+    ]
+}
+{ 
+    "_id" : ObjectId("5aa25fcca029441fdc915128"), 
+    "code" : "H1", 
+    "group" : "H", 
+    "__v" : NumberInt(0), 
+    "star" : NumberInt(0), 
+    "name" : "Colombia", 
+    "stats" : [
+        {
+            "titles" : "0", 
+            "fifaRank" : "13", 
+            "final" : "0", 
+            "semifinals" : "0", 
+            "firstage" : "5", 
+            "bestA" : "Quarter-finals 2014"
+        }
+    ]
+}
+{ 
+    "_id" : ObjectId("5aa25ff0a029441fdc915130"), 
+    "__v" : NumberInt(0), 
+    "code" : "H2", 
+    "group" : "H", 
+    "star" : NumberInt(0), 
+    "name" : "Japan", 
+    "stats" : [
+        {
+            "titles" : "0", 
+            "fifaRank" : "55", 
+            "final" : "0", 
+            "semifinals" : "0", 
+            "firstage" : "5", 
+            "bestA" : "Round of 16 2002, 2010"
+        }
+    ]
+}
+{ 
+    "_id" : ObjectId("5aa2601ca029441fdc915139"), 
+    "code" : "H4", 
+    "group" : "H", 
+    "star" : NumberInt(0), 
+    "name" : "Senegal", 
+    "__v" : NumberInt(0), 
+    "stats" : [
+        {
+            "titles" : "0", 
+            "fifaRank" : "23", 
+            "final" : "0", 
+            "semifinals" : "0", 
+            "firstage" : "1", 
+            "bestA" : "Quarter-finals 2002"
+        }
+    ]
+}
+{ 
+    "_id" : ObjectId("57248fc31390bc546b7b1906"), 
+    "code" : "D4", 
+    "name" : "Nigeria", 
+    "group" : "D", 
+    "star" : NumberInt(0), 
+    "stats" : [
+        {
+            "titles" : "0", 
+            "fifaRank" : "50", 
+            "final" : "0", 
+            "semifinals" : "0", 
+            "firstage" : "5", 
+            "bestA" : "Round of 16 1994, 1998, 2014"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("572474911390bc546b7b18f7"), 
+    "code" : "A3", 
+    "name" : "Saudi Arabia", 
+    "group" : "A", 
+    "star" : NumberInt(0), 
+    "stats" : [
+        {
+            "titles" : "0", 
+            "fifaRank" : "63", 
+            "final" : "0", 
+            "semifinals" : "0", 
+            "firstage" : "4", 
+            "bestA" : "Round of 16 1994"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("572482a91390bc546b7b18fa"), 
+    "code" : "E2", 
+    "name" : "Costa Rica", 
+    "group" : "E", 
+    "star" : NumberInt(0), 
+    "stats" : [
+        {
+            "titles" : "0", 
+            "fifaRank" : "26", 
+            "final" : "0", 
+            "semifinals" : "0", 
+            "firstage" : "4", 
+            "bestA" : "Quarter-finals 2014"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5724838d1390bc546b7b18fb"), 
+    "code" : "G1", 
+    "name" : "Belgium", 
+    "group" : "G", 
+    "star" : NumberInt(0), 
+    "stats" : [
+        {
+            "titles" : "0", 
+            "fifaRank" : "5", 
+            "final" : "0", 
+            "semifinals" : "1", 
+            "firstage" : "12", 
+            "bestA" : "4th place 1986"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("572489b91390bc546b7b18fc"), 
+    "code" : "D2", 
+    "name" : "Croatia", 
+    "group" : "D", 
+    "star" : NumberInt(0), 
+    "stats" : [
+        {
+            "titles" : "0", 
+            "fifaRank" : "17", 
+            "final" : "0", 
+            "semifinals" : "1", 
+            "firstage" : "4", 
+            "bestA" : "3rd place 1998"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("572482281390bc546b7b18f9"), 
+    "code" : "G2", 
+    "name" : "England", 
+    "group" : "G", 
+    "star" : NumberInt(1), 
+    "stats" : [
+        {
+            "titles" : "1", 
+            "fifaRank" : "15", 
+            "final" : "1", 
+            "semifinals" : "2", 
+            "firstage" : "14", 
+            "bestA" : "Champion 1966"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("57224aa8140bfe9c2440a496"), 
+    "code" : "C3", 
+    "name" : "France", 
+    "group" : "C", 
+    "star" : NumberInt(1), 
+    "stats" : [
+        {
+            "titles" : "1", 
+            "fifaRank" : "9", 
+            "final" : "2", 
+            "semifinal" : "5", 
+            "firstage" : "14", 
+            "bestA" : "Champion 1998"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("572489dd1390bc546b7b18fd"), 
+    "code" : "B4", 
+    "name" : "Spain", 
+    "group" : "B", 
+    "star" : NumberInt(1), 
+    "stats" : [
+        {
+            "titles" : "1", 
+            "fifaRank" : "6", 
+            "final" : "1", 
+            "semifinals" : "2", 
+            "firstage" : "14", 
+            "bestA" : "Champion 2010"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("572474d21390bc546b7b18f8"), 
+    "code" : "F1", 
+    "name" : "Germany", 
+    "group" : "F", 
+    "star" : NumberInt(4), 
+    "stats" : [
+        {
+            "titles" : "4", 
+            "fifaRank" : "1", 
+            "final" : "8", 
+            "semifinals" : "13", 
+            "firstage" : "18", 
+            "bestA" : "Champion 1954, 1974, 1990, 2014"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("57248a191390bc546b7b18fe"), 
+    "code" : "F2", 
+    "name" : "South Korea", 
+    "group" : "F", 
+    "star" : NumberInt(0), 
+    "stats" : [
+        {
+            "titles" : "0", 
+            "fifaRank" : "59", 
+            "final" : "0", 
+            "semifinals" : "1", 
+            "firstage" : "9", 
+            "bestA" : "4th place 2002"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("57248b441390bc546b7b1900"), 
+    "code" : "D3", 
+    "name" : "Iceland", 
+    "group" : "D", 
+    "star" : NumberInt(0), 
+    "stats" : [
+        {
+            "titles" : "0", 
+            "fifaRank" : "22", 
+            "final" : "0", 
+            "semifinals" : "0", 
+            "firstage" : "0", 
+            "bestA" : ""
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("57248b871390bc546b7b1901"), 
+    "code" : "E1", 
+    "name" : "Brazil", 
+    "group" : "E", 
+    "star" : NumberInt(5), 
+    "stats" : [
+        {
+            "titles" : "5", 
+            "fifaRank" : "2", 
+            "final" : "7", 
+            "semifinals" : "11", 
+            "firstage" : "20", 
+            "bestA" : "Champion 1958, 1962, 1970, 1994, 2002"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("57248b231390bc546b7b18ff"), 
+    "code" : "C1", 
+    "name" : "Australia", 
+    "group" : "C", 
+    "star" : NumberInt(0), 
+    "stats" : [
+        {
+            "titles" : "0", 
+            "fifaRank" : "39", 
+            "final" : "0", 
+            "semifinals" : "0", 
+            "firstage" : "4", 
+            "bestA" : "Round of 16 2006"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("57248f451390bc546b7b1903"), 
+    "code" : "H3", 
+    "name" : "Poland", 
+    "group" : "H", 
+    "star" : NumberInt(0), 
+    "stats" : [
+        {
+            "titles" : "0", 
+            "fifaRank" : "7", 
+            "final" : "0", 
+            "semifinals" : "2", 
+            "firstage" : "7", 
+            "bestA" : "3rd place 1974, 1982"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("57248f6a1390bc546b7b1904"), 
+    "code" : "B3", 
+    "name" : "Portugal", 
+    "group" : "B", 
+    "star" : NumberInt(0), 
+    "stats" : [
+        {
+            "titles" : "0", 
+            "fifaRank" : "3", 
+            "final" : "0", 
+            "semifinals" : "2", 
+            "firstage" : "6", 
+            "bestA" : "3rd place 1966"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("572490061390bc546b7b1909"), 
+    "code" : "B2", 
+    "name" : "Morocco", 
+    "group" : "B", 
+    "star" : NumberInt(0), 
+    "stats" : [
+        {
+            "titles" : "0", 
+            "fifaRank" : "40", 
+            "final" : "0", 
+            "semifinals" : "0", 
+            "firstage" : "4", 
+            "bestA" : "Round of 16 1986"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("57248ff41390bc546b7b1908"), 
+    "code" : "A2", 
+    "name" : "Russia", 
+    "group" : "A", 
+    "star" : NumberInt(0), 
+    "stats" : [
+        {
+            "titles" : "0", 
+            "fifaRank" : "65", 
+            "final" : "0", 
+            "semifinals" : "1", 
+            "firstage" : "10", 
+            "bestA" : "4th place 1966"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("57248fdc1390bc546b7b1907"), 
+    "code" : "A4", 
+    "name" : "Uruguay", 
+    "group" : "A", 
+    "star" : NumberInt(2), 
+    "stats" : [
+        {
+            "titles" : "2", 
+            "fifaRank" : "21", 
+            "final" : "2", 
+            "semifinals" : "5", 
+            "firstage" : "12", 
+            "bestA" : "Champion 1930, 1950"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5724901b1390bc546b7b190a"), 
+    "code" : "F4", 
+    "name" : "Sweden", 
+    "group" : "F", 
+    "star" : NumberInt(0), 
+    "stats" : [
+        {
+            "titles" : "0", 
+            "fifaRank" : "18", 
+            "final" : "1", 
+            "semifinals" : "4", 
+            "firstage" : "11", 
+            "bestA" : "Runners up 1958"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5724902e1390bc546b7b190b"), 
+    "code" : "E3", 
+    "name" : "Switzerland", 
+    "group" : "E", 
+    "star" : NumberInt(0), 
+    "stats" : [
+        {
+            "titles" : "0", 
+            "fifaRank" : "8", 
+            "final" : "0", 
+            "semifinals" : "0", 
+            "firstage" : "10", 
+            "bestA" : "Quarter-finals 1934, 1938, 1954"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("572490581390bc546b7b190d"), 
+    "code" : "C2", 
+    "name" : "Denmark", 
+    "group" : "C", 
+    "star" : NumberInt(0), 
+    "stats" : [
+        {
+            "titles" : "0", 
+            "fifaRank" : "12", 
+            "final" : "0", 
+            "semifinals" : "0", 
+            "firstage" : "4", 
+            "bestA" : "Quarter-finals 1998"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("572490461390bc546b7b190c"), 
+    "code" : "D1", 
+    "name" : "Argentina", 
+    "group" : "D", 
+    "star" : NumberInt(2), 
+    "stats" : [
+        {
+            "titles" : "2", 
+            "fifaRank" : "4", 
+            "final" : "5", 
+            "semifinals" : "5", 
+            "firstage" : "16", 
+            "bestA" : "Champion 1978, 1986"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("57248fae1390bc546b7b1905"), 
+    "code" : "C4", 
+    "name" : "Peru", 
+    "group" : "C", 
+    "star" : NumberInt(0), 
+    "stats" : [
+        {
+            "titles" : "0", 
+            "fifaRank" : "11", 
+            "final" : "0", 
+            "semifinals" : "0", 
+            "firstage" : "4", 
+            "bestA" : "Quarter-finals 1970, 1978"
+        }
+    ], 
+    "__v" : NumberInt(0)
+}
