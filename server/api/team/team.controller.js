@@ -8,7 +8,7 @@ var Team = require('./team.model');
 exports.index = function(req, res) {
   Team.find(function (err, teams) {
     if(err) { return handleError(res, err); }
-    return res.json(200, teams);
+    return res.status(200).json(teams);
   });
 };
 
