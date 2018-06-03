@@ -14,11 +14,12 @@
     ];
 
 
-    constructor($http, Auth, $stateParams, $timeout) {
+    constructor($http, Auth, $stateParams, $timeout, growl) {
       this.$http = $http;
       this.isLoggedIn = Auth.isLoggedIn;
       this.isAdmin = Auth.isAdmin;
       this.$timeout = $timeout;
+      this.growl = growl;
       this.getCurrentUser = Auth.getCurrentUser;
       this.matchs = [];
       this.groupThird = [];
@@ -469,8 +470,8 @@
           this.toUpdate = true;
         });
       }
+      this.growl.success("Pronotic saved", {ttl: 5000});
     }
-
   }
 
   angular.module('worldProno2018App')

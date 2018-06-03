@@ -18,7 +18,8 @@ angular.module('worldProno2018App', [
   'flow',
   'chart.js',
   'ngTouch',
-  'zumba.angular-waypoints'
+  'zumba.angular-waypoints',
+  'angular-growl'
 ])
   .config(function($urlRouterProvider, $locationProvider, $translateProvider) {
     $urlRouterProvider
