@@ -45,6 +45,7 @@ module.exports = function(config) {
       'client/bower_components/ng-flow/dist/ng-flow.js',
       'client/bower_components/raty/lib/jquery.raty.js',
       'client/bower_components/ngRaty/ngraty.js',
+      'client/bower_components/angular-growl-v2/build/angular-growl.js',
       'client/bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'node_modules/socket.io-client/socket.io.js',

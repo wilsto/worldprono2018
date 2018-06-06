@@ -470,7 +470,7 @@
           this.toUpdate = true;
         });
       }
-      this.growl.success("Pronotic saved", {ttl: 5000});
+      this.growl.success('Pronotic saved', {ttl: 5000});
     }
   }
 
