@@ -48,7 +48,7 @@
     "connect-livereload": "^0.6.0",
     "grunt": "^1.0.2",
     "grunt-angular-templates": "^1.0.3",
-    "grunt-babel": "~7.0.0",
+    "grunt-babel": "~8.0.0",
     "grunt-build-control": "^0.7.0",
     "grunt-concurrent": "^2.0.1",
     "grunt-contrib-clean": "^1.0.0",
