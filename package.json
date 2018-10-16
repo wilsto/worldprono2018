@@ -36,7 +36,7 @@
     "socketio-jwt": "^4.2.0"
   },
   "devDependencies": {
-    "autoprefixer": "^8.0.0",
+    "autoprefixer": "^9.2.1",
     "babel-core": "^6.6.5",
     "babel-plugin-transform-class-properties": "^6.6.0",
     "babel-plugin-transform-runtime": "^6.6.0",
